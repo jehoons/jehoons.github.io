@@ -1,8 +1,7 @@
 ---
 published: false
----
----
-
+layout: post
+date: '2016.10.09 22:00'
 ---
 ## A New Post
 
