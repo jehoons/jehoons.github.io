@@ -10,6 +10,8 @@ When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
+TEX사용법은 [TEX WIKI](https://en.wikibooks.org/wiki/LaTeX/Mathematics)참고
+
 ### source code 
  
 ```python 
