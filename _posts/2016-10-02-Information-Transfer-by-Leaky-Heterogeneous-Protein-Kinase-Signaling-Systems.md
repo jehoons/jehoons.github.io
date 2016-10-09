@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 기저시그널링에 의한 노이즈가 존재할 때의 생체네트워크의 정보전달
+title: Information transfer with basal signaling channel
 date: '2016-10-02 22:33'
 published: true
 ---
