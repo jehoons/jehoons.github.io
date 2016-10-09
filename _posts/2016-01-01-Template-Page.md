@@ -2,7 +2,7 @@
 layout: post
 title: Template Page
 date: '2016.10.09 19:00'
-published: false
+published: true
 ---
 블로그 페이지를 만들기 위한 기본 골격
 
