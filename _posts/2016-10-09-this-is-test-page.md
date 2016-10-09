@@ -19,6 +19,7 @@ print 'hello'
 ```
 
 ### image
+구글포토에서 이미지를 넣는방법.
 
 ![alt text](https://goo.gl/J6vin1 "this is image")
 
