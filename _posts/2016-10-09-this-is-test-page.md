@@ -22,5 +22,3 @@ print 'hello'
 
 ![alt text](https://goo.gl/J6vin1 "this is image")
 
-
-
