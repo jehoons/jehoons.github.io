@@ -1,8 +1,7 @@
 ---
-layout: page
 title: About
-permalink: /about/
-published: true
+permalink: "/about/"
+layout: page
 ---
 
 Some information about me 
