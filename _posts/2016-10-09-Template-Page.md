@@ -8,7 +8,7 @@ layout: post
 블로그 페이지를 만들기 위한 기본 골격
 
 ### 수학식작성 
-When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are 
+When $$a \ne 0$$, there are two solutions to $ax^2 + bx + c = 0$ and they are 
 
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
