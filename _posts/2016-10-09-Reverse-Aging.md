@@ -10,6 +10,8 @@ published: true
 
 $$x=x+1$$
 
+
+
 ### 참고사항
 
 * [관련된 토론 in QUORA](https://www.quora.com/Will-it-be-possible-to-reverse-aging-in-the-near-future)
