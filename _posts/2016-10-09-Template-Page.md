@@ -1,9 +1,10 @@
 ---
-layout: post
 title: Template Page
-date: '2016.10.09 19:00'
+date: 2016-10-09 19:00:00 Z
 published: false
+layout: post
 ---
+
 블로그 페이지를 만들기 위한 기본 골격
 
 ### 수학식작성 
