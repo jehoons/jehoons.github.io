@@ -2,7 +2,7 @@
 title: 리버스에이징
 date: {}
 layout: post
-published: true
+published: false
 ---
 
 
