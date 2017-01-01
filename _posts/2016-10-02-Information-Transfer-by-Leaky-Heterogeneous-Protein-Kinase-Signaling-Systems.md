@@ -1,6 +1,6 @@
 ---
 title: Information transfer with basal signaling channel
-date: 2016-10-02 22:33:00 Z
+date: 2016-10-02 22:33:00
 layout: post
 ---
 
