@@ -1,5 +1,5 @@
 ---
-title: '세포는 DNA손상에 대해서 어떻게 반응하는가?'
+title: '노화와 암: 세포는 DNA손상에 대해서 어떻게 반응하는가?'
 date: '2016-10-09 17:00'
 layout: post
 published: true
