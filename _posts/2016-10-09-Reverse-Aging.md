@@ -14,7 +14,7 @@ published: true
 
 
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a}. $$
-
+    
 ```python
 import os,sys,pandas 
 sys.path.append('.')
