@@ -1,5 +1,5 @@
 ---
-title: '리버스에이징'
+title: 'DNA손상에 대한 반응과 노화/암의 관계'
 date: '2016-10-09 17:00'
 layout: post
 published: true
