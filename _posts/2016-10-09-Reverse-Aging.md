@@ -1,5 +1,5 @@
 ---
-title: '리버스에이징'
+title: 리버스에이징
 date: '2016-10-09 17:00'
 layout: post
 published: true
