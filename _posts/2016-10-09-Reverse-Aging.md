@@ -16,4 +16,3 @@ dna회복기능의 결여는 세포수준의 미세한 변화이지만, 이들�
 [Seviour, E.G., and Lin, S.-Y. (2010). The DNA damage response: Balancing the scale between cancer and ageing. Aging 2, 900–907.](https://www.dropbox.com/s/u8xcna8t0qq5jdq/Seviour%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Lin%20-%202010%20-%20The%20DNA%20damage%20response%20Balancing%20the%20scale%20betwe.pdf?dl=0)
 
 
-
