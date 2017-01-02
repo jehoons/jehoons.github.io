@@ -1,5 +1,5 @@
 ---
-title: 'DNA손상에 대한 반응과 노화/암의 관계'
+title: '세포는 DNA손상에 대해서 어떻게 반응하는가?'
 date: '2016-10-09 17:00'
 layout: post
 published: true
