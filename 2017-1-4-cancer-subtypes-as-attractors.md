@@ -22,7 +22,4 @@ DNA회복반응의 결여는 세포수준의 미세한 변화이지만, 이들�
 인체의 메커니즘은 시간에 따라서 노화되는 생체조직의 완결성을 보장하기 위해서, 다른 말로는 건강한 노화를 위해서 이러한 DNA회복반응이 암발병과 노화사이의 적절한 지점을 찾기 위하여 균형있게 작용하였을때 얻어지는 것이다. 세포가 건강한 노화를 하는데 필요한 최적의 밸런스를 찾도록 인위적으로 세포내부의 메커니즘을 조절할 수 있을까? 노환없이 건강하게 늙을 가능성을 보다 높일 수 있을지도 모른다.
 
 ### 참고문헌
-[Seviour, E.G., and Lin, S.-Y. (2010). The DNA damage response: Balancing the scale between cancer and ageing. Aging 2, 900–907.](https://www.dropbox.com/s/u8xcna8t0qq5jdq/Seviour%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Lin%20-%202010%20-%20The%20DNA%20damage%20response%20Balancing%20the%20scale%20betwe.pdf?dl=0)
-
-
 [Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.](https://www.dropbox.com/s/yefngghs5ylzejq/Maetschke_Ragan_2014_Characterizing%20cancer%20subtypes%20as%20attractors%20of%20Hopfield%20networks.pdf?dl=0)
