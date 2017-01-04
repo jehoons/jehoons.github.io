@@ -2,7 +2,7 @@
 title: 'Cancer subtypes as attractors of hopfiled networks?'
 date: '2017-1-4 10:00'
 layout: post
-published: true
+published: false
 ---
 
 #### 세포는 DNA 손상이 식별되었을 때에는 이를 복구해야 하고, 만약 복구가 불가능한 경우에는 더 큰 문제의 발생을 방지하기 위해서 세포자살프로그램에 의해서 사멸되어야 한다.
