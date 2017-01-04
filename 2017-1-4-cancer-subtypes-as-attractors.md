@@ -1,6 +1,6 @@
 ---
 title: 'Cancer subtypes as attractors of hopfiled networks?'
-date: '2017-1-2 10:00'
+date: '2017-1-4 10:00'
 layout: post
 published: true
 ---
