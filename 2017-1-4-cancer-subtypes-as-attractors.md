@@ -13,5 +13,8 @@ published: false
 #### 홉필드 네트워크 (Hopfield network)
 홉필드 네트워크는 1982년 물리학자 존 홉필드가 제안한 신경망의 물리적 모델로써 연상기억(associative memory)에 대한 수학적 모델로써 주로 사용된다.
 
+홉필드 네트워크 참고자료 
+http://www.scholarpedia.org/article/Hopfield_network
+
 ### 참고문헌
 [Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.](https://www.dropbox.com/s/yefngghs5ylzejq/Maetschke_Ragan_2014_Characterizing%20cancer%20subtypes%20as%20attractors%20of%20Hopfield%20networks.pdf?dl=0)
