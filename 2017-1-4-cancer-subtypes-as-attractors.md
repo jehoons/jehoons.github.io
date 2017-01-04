@@ -1,5 +1,5 @@
 ---
-title: 'Cancer subtypes as attractors of hopfiled networks (under construction)'
+title: 'Cancer subtypes as attractors of hopfiled networks (작성중)'
 date: '2017-1-4 10:00'
 layout: post
 published: false
