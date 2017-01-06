@@ -24,6 +24,7 @@ Third, for high dimensional gene data, energy can be calculated with following e
 $$ \mathbf{E}(\mathbf{S})=-\frac{1}{2} \mathbf{S}^{T}\mathbf{W}\mathbf{S}$$
 
 Here, the energy can be computed for each high dimensional state vectors. 
+> 이방법을 이용한다면 
 
 ```matlab
 X = rand(100,3); 
