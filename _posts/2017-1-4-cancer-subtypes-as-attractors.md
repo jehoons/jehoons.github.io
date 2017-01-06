@@ -8,8 +8,6 @@ In general, cancer subtypes are determined by traditional clustering algorithms 
 
 [tasks](#tasks)
 
-
-
 #### Hopfield network
 A Hopfield network is a form of recurrent artificial neural network popularized by John Hopfield in 1982. A Hopfield network is a recrruent neural network having symmetric weights. The symmetric weight means that there is no negative feedback, and consequently the network becomes stable. Two nodes in Hopfield networks can activate each other, or inhibit each other. This network model is useful especially in modeling associative memory.
 
