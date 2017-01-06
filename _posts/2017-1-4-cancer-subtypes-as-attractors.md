@@ -24,7 +24,7 @@ Second, transform the 2-dimensional points into high dimensional space. This is 
 
 $$[G_{k\times 2}, Z_{k \times m-2}]T^{-1}$$
 
-Here, $$Z$$ is a matrix filled with zeros.
+where $$Z$$ is a matrix filled with zeros.
 
 셋째, 고차원의 유전자, 공간샘플좌표들에 대해서 다음 식을 이용하여 에너지를 구할 수 있다. 
 
