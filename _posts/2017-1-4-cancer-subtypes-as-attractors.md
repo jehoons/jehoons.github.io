@@ -26,7 +26,7 @@ $$ \mathbf{E}(\mathbf{S})=-\frac{1}{2} \mathbf{S}^{T}\mathbf{W}\mathbf{S}$$
 
 Here, the energy can be computed for each high dimensional state vectors. 
 
-### 참고문헌
+### References
 [Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.](https://www.dropbox.com/s/yefngghs5ylzejq/Maetschke_Ragan_2014_Characterizing%20cancer%20subtypes%20as%20attractors%20of%20Hopfield%20networks.pdf?dl=0)
 
 [http://www.scholarpedia.org/article/Hopfield_network](http://www.scholarpedia.org/article/Hopfield_network)
