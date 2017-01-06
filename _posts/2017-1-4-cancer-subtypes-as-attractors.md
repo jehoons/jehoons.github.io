@@ -24,7 +24,7 @@ Third, for high dimensional gene data, energy can be calculated with following e
 $$ \mathbf{E}(\mathbf{S})=-\frac{1}{2} \mathbf{S}^{T}\mathbf{W}\mathbf{S}$$
 
 Here, the energy can be computed for each high dimensional state vectors. 
-> 이방법을 이용한다면 
+> 이방법을 응용한다면 boolean network, vector field 등을 모두 시각화할 수 있는 툴을 만들 수 있을 것으로 생각된다.
 
 ```matlab
 X = rand(100,3); 
