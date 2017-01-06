@@ -4,7 +4,7 @@ date: '2017-1-4 10:00'
 layout: post
 published: true
 ---
-(Maetschke et al., 2014) suggested a cancer subtyping method based on Hopfield network model.
+(Maetschke et al., 2014) suggested a cancer subtyping method based on Hopfield network model. 
 
 #### Hopfield network
 홉필드 네트워크는 1982년 물리학자 존 홉필드가 제안한 신경망의 물리적 모델로써 연상기억(associative memory)에 대한 수학적 모델로써 주로 사용된다.
