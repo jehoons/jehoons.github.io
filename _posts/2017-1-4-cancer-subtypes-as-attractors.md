@@ -8,7 +8,7 @@ In general, cancer subtypes are determined by traditional clustering algorithms 
 
 A Hopfield network is a form of recurrent artificial neural network popularized by John Hopfield in 1982. A Hopfield network is a recrruent neural network having symmetric weights. The symmetric weight means that there is no negative feedback, and consequently the network becomes stable. Two nodes in Hopfield networks can activate each other, or inhibit each other. This network model is useful especially in modeling associative memory. 
 
-One of the most interesting part of this paper is visualizing method. This paper introduces a method to map high dimensional data into 2 dimensional data, calculate potential energy, and draw landscape plot. Let's assume that $$ \mathbf{D}_{n\times m}$$ be a matrix data with $$n$$ samples and $$m$$ genes. Then, the visualization is composed with following three steps. First, tranform the high dimensional data into 2 dimensional data with following equation.
+One of the most interesting part of this paper is visualizing. This paper introduces a method to map high dimensional data into 2 dimensional data, calculate potential energy, and draw landscape plot. Let's assume that $$ \mathbf{D}_{n\times m}$$ be a matrix data with $$n$$ samples and $$m$$ genes. Then, the visualization is composed with following three steps. First, tranform the high dimensional data into 2 dimensional data with following equation.
 
 $$\mathbf{D}_{n\times2} = \mathbf{D}_{n\times m} \mathbf{T}_{m\times 2}$$
 
