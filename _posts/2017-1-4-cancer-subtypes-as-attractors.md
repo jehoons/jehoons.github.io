@@ -24,5 +24,15 @@ $$ \mathbf{E}(\mathbf{S})=-\frac{1}{2} \mathbf{S}^{T}\mathbf{W}\mathbf{S}$$
 
 Here, the energy can be computed for each high dimensional state vectors. 
 
+```matlab
+X = rand(100,3); 
+[coeff, score, latent] = pca(X); 
+Xpca = X*coeff; 
+space_2d = rand(1000,2); 
+
+space_2d_p = [space_2d zeros(1000,1)];
+space3d = space_2d_p*coeff^-1;
+```
+
 ### References
 Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.
