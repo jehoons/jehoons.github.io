@@ -18,7 +18,7 @@ http://www.scholarpedia.org/article/Hopfield_network
 
 #### Visualization 
 
-$$D_{n\times m}$$가 n개의 샘플과 m개의 
+$$D_{n\times m}$$가 n개의 샘플과 m개의 유전자로 구성된 행렬이라고 하자. 그러면, 
 
 $$D_{n\times2}=D_{n\times m}T_{m\times 2} $$ 
 
