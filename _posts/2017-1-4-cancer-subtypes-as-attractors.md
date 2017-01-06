@@ -1,5 +1,5 @@
 ---
-title: 'Cancer subtypes as attractors of hopfiled networks'
+title: 'Cancer subtypes as attractors of Hopfiled networks'
 date: '2017-1-4 10:00'
 layout: post
 published: true
