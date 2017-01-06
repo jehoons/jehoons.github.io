@@ -22,7 +22,7 @@ $$D_{n\times2}=D_{n\times m}T_{m\times 2}$$
 
 Second, transform the 2-dimensional points into high dimensional space. This is done by the equation, 
 
-$$[G_{k\times 2}, Z_{k\times m-2}] T^{-1}$$
+$$[G_{k\times 2}, Z_{k \times m-2}]T^{-1}$$
 
 Here, $$Z$$ is a matrix filled with zeros.
 
