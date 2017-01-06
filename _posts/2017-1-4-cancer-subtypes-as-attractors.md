@@ -16,5 +16,11 @@ published: true
 홉필드 네트워크 참고자료 
 http://www.scholarpedia.org/article/Hopfield_network
 
+#### Visualization 
+
+$$D_{n\times m}$$가 n개의 샘플과 m개의 
+
+$$D_{n\times2}=D_{n\times m}T_{m\times 2} $$ 
+
 ### 참고문헌
 [Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.](https://www.dropbox.com/s/yefngghs5ylzejq/Maetschke_Ragan_2014_Characterizing%20cancer%20subtypes%20as%20attractors%20of%20Hopfield%20networks.pdf?dl=0)
