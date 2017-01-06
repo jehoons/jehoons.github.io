@@ -7,7 +7,7 @@ published: true
 (Maetschke et al., 2014) suggested a cancer subtyping method based on Hopfield network model. 
 
 #### Hopfield network
-홉필드 네트워크는 1982년 물리학자 존 홉필드가 제안한 신경망의 물리적 모델로써 연상기억(associative memory)에 대한 수학적 모델로써 주로 사용된다.
+A Hopfield network is a form of recurrent artificial neural network popularized by John Hopfield in 1982. A Hopfield network is a recrruent neural network having symmetric weights. Two nodes in Hopfield networks can activate each other, or inhibit each other. This network model is useful especially in modeling associative memory.
 
 #### Visualization 
 This paper introduces a method to map high dimensional data into 2 dimensional data, calculate potential energy, and draw landscape plot. Let's assume that $$D_{n\times m}$$ be a matrix data with $$n$$ samples and $$m$$ genes. Then, the visualization is composed with following three steps. First, tranform the high dimensional data into 2 dimensional data with following equation.
