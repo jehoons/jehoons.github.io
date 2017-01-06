@@ -14,7 +14,7 @@ $$\mathbf{D}_{n\times2} = \mathbf{D}_{n\times m} \mathbf{T}_{m\times 2}$$
 
 Second, transform the 2-dimensional points into high dimensional space. This is done by the equation, 
 
-$$[\mathbf{G}_{k\times 2}, \mathbf{Z}_{k \times m-2}] \mathbf{T}^{-1}$$
+$$\mathbf{G}_{k\times m}=[\mathbf{G}_{k\times 2}, \mathbf{Z}_{k \times m-2}] \mathbf{T}^{-1}$$
 
 where $$\mathbf{Z}$$ is a matrix filled with zeros.
 
