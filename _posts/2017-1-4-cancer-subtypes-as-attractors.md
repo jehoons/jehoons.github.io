@@ -10,7 +10,7 @@ published: true
 
 어트랙터는 비선형동역학 시스템의 정상상태를 말한다.
 
-#### 홉필드 네트워크 (Hopfield network)
+#### Hopfield network
 홉필드 네트워크는 1982년 물리학자 존 홉필드가 제안한 신경망의 물리적 모델로써 연상기억(associative memory)에 대한 수학적 모델로써 주로 사용된다.
 
 홉필드 네트워크 참고자료 
