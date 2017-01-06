@@ -4,7 +4,7 @@ date: '2017-1-4 10:00'
 layout: post
 published: true
 ---
-(Maetschke et al., 2014) suggested a cancer subtyping method based on Hopfield network model. 
+In general, cancer subtypes are determined by traditional clustering algorithms such as k-means clustering algorithms. (Maetschke et al., 2014) suggests a method to detect cancer subtypes based on Hopfield network model. Subtypes are detected dynamically, and interestingly this method integrates network identification, feature selection, clustering, and visualization.
 
 #### Hopfield network
 A Hopfield network is a form of recurrent artificial neural network popularized by John Hopfield in 1982. A Hopfield network is a recrruent neural network having symmetric weights. Two nodes in Hopfield networks can activate each other, or inhibit each other. This network model is useful especially in modeling associative memory.
