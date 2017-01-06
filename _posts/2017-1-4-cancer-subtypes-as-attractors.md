@@ -27,10 +27,7 @@ $$D_{n\times2}=D_{n\times m}T_{m\times 2}$$
 
 $$E(S)=-\frac{1}{2}S^{T}WS$$
 
-여기서, 고차원 좌표들에 대해서 얻어진 에너지는 고차원 좌표들을 2차원으로 변환하여 얻어진 좌표들의 에너지라는 점에 유의하자. 그러면, 손쉽게 2차원 좌표에서의 에너지를 z축으로 하는 3차원 그래프를 아래와 같이 얻을 수 있다.
-
-![](https://www.dropbox.com/s/6zdiw81dtvjd6ye/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202017-01-06%2020.09.19.png?dl=1)
-
+여기서, 고차원 좌표들에 대해서 얻어진 에너지는 고차원 좌표들을 2차원으로 변환하여 얻어진 좌표들의 에너지라는 점에 유의하자. 그러면, 손쉽게 2차원 좌표에서의 에너지를 z축으로 하는 3차원 그래프를 얻을 수 있다.
 
 ### 참고문헌
 [Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.](https://www.dropbox.com/s/yefngghs5ylzejq/Maetschke_Ragan_2014_Characterizing%20cancer%20subtypes%20as%20attractors%20of%20Hopfield%20networks.pdf?dl=0)
