@@ -15,6 +15,7 @@ $$\mathbf{D}_{n\times2} = \mathbf{D}_{n\times m} \mathbf{T}_{m\times 2}$$
 Second, transform the 2-dimensional points into high dimensional space. This is done by the equation, 
 
 $$\mathbf{G}_{k\times m}=[\mathbf{G}_{k\times 2}, \mathbf{Z}_{k \times m-2}] \mathbf{T}^{-1}$$
+
 > 여기서 좌변의 고차원 상태값들에 대해서는 그것의 에너지를 모두 계산할 수 있다. 그러므로 우변에 대해서도 모든 에너지, 즉 $$\mathbf Z$$축의 값을 구할 수 있다는 것을 의미한다.
 
 where $$\mathbf{Z}$$ is a matrix filled with zeros.
@@ -24,6 +25,7 @@ Third, for high dimensional gene data, energy can be calculated with following e
 $$ \mathbf{E}(\mathbf{S})=-\frac{1}{2} \mathbf{S}^{T}\mathbf{W}\mathbf{S}$$
 
 Here, the energy can be computed for each high dimensional state vectors. 
+
 > 이방법을 응용한다면 boolean network, vector field 등을 모두 시각화할 수 있는 툴을 만들 수 있을 것으로 생각된다.
 
 ```matlab
