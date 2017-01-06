@@ -20,9 +20,7 @@ First, tranform the high dimensional data into 2 dimensional data with following
 
 $$D_{n\times2}=D_{n\times m}T_{m\times 2}$$
 
-Second, transform the 2-dimensional points into high dimensional space. This is done by the equation, $$(G_{k\times 2} | Z_{k\times m-2}) T^{-1} $$. 
-
-여기서 $$Z$$는 0으로 채워진 행렬이다. 
+Second, transform the 2-dimensional points into high dimensional space. This is done by the equation, $$(G_{k\times 2} | Z_{k\times m-2}) T^{-1} $$. Here, $$Z$$ is a matrix filled with zeros.
 
 셋째, 고차원의 유전자, 공간샘플좌표들에 대해서 다음 식을 이용하여 에너지를 구할 수 있다. 
 
