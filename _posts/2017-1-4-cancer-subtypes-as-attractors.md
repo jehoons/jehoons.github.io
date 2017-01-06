@@ -20,7 +20,7 @@ http://www.scholarpedia.org/article/Hopfield_network
 이 연구에서는 고차원 상태끌개를 2차원으로 매핑하고 이를 시각화하는 방법을 소개하였다.
 $$D_{n\times m}$$가 n개의 샘플과 m개의 유전자로 구성된 행렬이라고 하자. 그러면, 
 
-$$D_{n\times2}=D_{n\times m}T_{m\times 2} $$ 
+$$D_{n\times2}=D_{n\times m}T_{m\times 2} $$
 
 ### 참고문헌
 [Maetschke, S.R., and Ragan, M.A. (2014). Characterizing cancer subtypes as attractors of Hopfield networks. Bioinformatics 30, 1273–1279.](https://www.dropbox.com/s/yefngghs5ylzejq/Maetschke_Ragan_2014_Characterizing%20cancer%20subtypes%20as%20attractors%20of%20Hopfield%20networks.pdf?dl=0)
