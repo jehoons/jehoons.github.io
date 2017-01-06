@@ -21,9 +21,7 @@ http://www.scholarpedia.org/article/Hopfield_network
 
 $$D_{n\times2}=D_{n\times m}T_{m\times 2}$$
 
-둘째, 시각화하고자 하는 2차원의 평면을 고차원으로 보낸다. 이것은 
-
-$$ (G_{k\times 2} | Z_{k\times m-2}) T^{-1} $$ 
+둘째, 시각화하고자 하는 2차원의 평면을 고차원으로 보낸다. 이것은 $$(G_{k\times 2} | Z_{k\times m-2}) T^{-1} $$ 
 
 을 이용하여 계산한다. 여기서 $$Z$$는 0으로 채워진 행렬이다. 
 
