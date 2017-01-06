@@ -14,9 +14,7 @@ published: true
 홉필드 네트워크는 1982년 물리학자 존 홉필드가 제안한 신경망의 물리적 모델로써 연상기억(associative memory)에 대한 수학적 모델로써 주로 사용된다.
 
 #### Visualization 
-This paper introduces a method to map high dimensional data into 2 dimensional data, calculate potential energy, and draw landscape plot. Let's assume that $$D_{n\times m}$$ be a matrix data with $$n$$ samples and $$m$$ genes. Then, the visualization is composed with following three steps.
-
-First, tranform the high dimensional data into 2 dimensional data with following equation.
+This paper introduces a method to map high dimensional data into 2 dimensional data, calculate potential energy, and draw landscape plot. Let's assume that $$D_{n\times m}$$ be a matrix data with $$n$$ samples and $$m$$ genes. Then, the visualization is composed with following three steps. First, tranform the high dimensional data into 2 dimensional data with following equation.
 
 $$D_{n\times2}=D_{n\times m}T_{m\times 2}$$
 
@@ -26,7 +24,7 @@ $$[G_{k\times 2}, Z_{k \times m-2}]T^{-1}$$
 
 where $$Z$$ is a matrix filled with zeros.
 
-셋째, 고차원의 유전자, 공간샘플좌표들에 대해서 다음 식을 이용하여 에너지를 구할 수 있다. 
+Third, for high dimensional gene data, energy can be calculated with following equation.
 
 $$E(S)=-\frac{1}{2}S^{T}WS$$
 
