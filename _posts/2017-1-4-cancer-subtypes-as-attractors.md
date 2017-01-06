@@ -17,8 +17,8 @@ published: true
 http://www.scholarpedia.org/article/Hopfield_network
 
 #### Visualization 
-이 연구에서는 고차원 상태끌개를 2차원으로 매핑하고 이를 시각화하는 방법을 소개하였다.
-$$D_{n\times m}$$가 n개의 샘플과 m개의 유전자로 구성된 행렬이라고 하자. 그러면, 
+이 연구에서는 고차원 상태끌개를 2차원으로 매핑하고 이를 시각화하는 방법을 소개하였다. 우선, $$D_{n\times m}$$가 n개의 샘플과 m개의 유전자로 구성된 행렬이라고 하자. 그러면 시각화는 다음과 같은 세개의 단계로 구성된다.
+
 
 $$D_{n\times2}=D_{n\times m}T_{m\times 2} $$
 
