@@ -27,13 +27,15 @@ markdown: kramdown
 
 FB:
   comments :
-    # provider : duoshuo
+    # provider: duoshuo
     # duoshuo:
     #     short_name : luoyan35714
-    disqus :
-        short_name : jehoons
+    provider: disqus
+    disqus:
+        short_name: jehoons
     # facebook :
     #   appid : 123
     #   num_posts: 5
     #   width: 580
     #   colorscheme: light
+
