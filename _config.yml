@@ -1,41 +1,50 @@
-# Site settings
+---
+title: Jehoons.Github.Io
+timezone: Asia/Seoul
+future: true
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 name: BabyR
-email: song.jehoon@gmail.com
-author: Je-Hoon Song
-url: https://jehoons.github.io
-resume_site: https://jehoons.github.io/Resume.io/
-github: https://github.com/luoyan35714/
-baseurl: "https://jehoons.github.io/"
-description: Actually, less is more!
-meta_description: My small lab;
-motto: It's our wits that make us men.
-banner: Knowing is not enough, we must apply. 
-
-#permalink: /:categories/:year/:month/:day/:title/
-permalink: /:year/:month/:day/:title/
-
-paginate: 10
-
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
-
-github_username: jehoons 
-
-highlighter: rouge
-
-# Build settings
-markdown: kramdown
-
-FB:
-  comments:
-    # provider: duoshuo
-    # duoshuo:
-    #     short_name : luoyan35714
-    provider: disqus
-    disqus:
-        short_name: jehoons
-    # facebook :
-    #   appid : 123
-    #   num_posts: 5
-    #   width: 580
-    #   colorscheme: light
-
+description: Baby Researcher
+avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+footer-links:
+  dribbble: 
+  email: song.jehoon@gmail.com
+  facebook: 
+  flickr: 
+  github: jehoons
+  instagram: 
+  linkedin: 
+  pinterest: 
+  rss: 
+  twitter: JeHoonSong1
+  stackoverflow: 
+  youtube: 
+  googleplus: 
+disqus: jehoons
+google_analytics: 
+url: http://jehoons.github.io
+baseurl: ''
+permalink: "/:title/"
+version: v1.2.0
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+sass:
+  style: :expanded
+gems:
+- jekyll-sitemap
+- jekyll-feed
+exclude:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- CNAME
