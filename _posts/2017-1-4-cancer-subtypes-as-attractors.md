@@ -24,7 +24,7 @@ $$ \mathbf{E}(\mathbf{S})=-\frac{1}{2} \mathbf{S}^{T}\mathbf{W}\mathbf{S}$$
 
 Here, the energy can be computed for each high dimensional state vectors. I think it is also possible that we can extend this method into boolean network, and vector field, and so on. 
 
-```python 
+```
 numpy.savetxt('hebbian_plots/output_lr'+str(learning_rate)+'_nHidden'+str(n_hidden_list)+'_epoch'+str(epoch)+'_bs'+str(batch_size)+'.txt',output,fmt='%f')
 numpy.savetxt('hebbian_plots/labels_lr'+str(learning_rate)+'_nHidden'+str(n_hidden_list)+'_epoch'+str(epoch)+'_bs'+str(batch_size)+'.txt',labels[0:n_tsne],fmt='%f')
             
