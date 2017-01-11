@@ -32,7 +32,6 @@ if __name__ == '__main__':
     n_epochs=200
     n_hidden_list=[9]
     sgd_optimization_mnist(n_epochs=n_epochs,n_hidden_list=n_hidden_list)
-
 ```
 
 ### References
