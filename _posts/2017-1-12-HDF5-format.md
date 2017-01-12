@@ -5,10 +5,7 @@ layout: post
 published: true
 ---
 
-HDF5에 대한 설명은 아래와 같다.
-
-> HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. HDF5 is portable and is extensible, allowing applications to evolve in their use of HDF5.Nov 15, 2016
-
+HDF5는 데이터를 저장하고 관리하기 위한 모델, 라이브러리, 파일형식이다. 제한없이 다양한 형태의 데이터형을 지원하여 복잡한 대규모 데이터에 대한 유연하고 효과적인 입출력을 위해서 고안되었다.
 
 ```python
 #
