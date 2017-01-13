@@ -4,7 +4,8 @@ date: '2017-1-4 10:00'
 layout: post
 published: true
 ---
-이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 꼼꼼히 읽어보기 위해서 번역합니다.
+> 이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 꼼꼼히 읽어보기 위해서 번역합니다.
+
 ### LSTM 네트워크의 이해
 #### Recurrent Neural Networks
 당신은 매 초마다 새로운 생각을 시작하는 것은 아니다. 이 글을 읽는 동안 당신은 이전 단어의 이해에 기반을 두어 단어들을 이해한다. 즉 당신은 모든 생각을 던져 버리고 새로운 생각을 시작하지는 않는다는 것이다. 그러므로 당신의 생각은 지속성을 가지고 있다. 
