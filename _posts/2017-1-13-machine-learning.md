@@ -1,5 +1,5 @@
 ---
-title: '강력한 데이터저장 방식인 HDF5 사용해보기'
+title: 'LSTM 네트워크의 이해'
 date: '2017-1-4 10:00'
 layout: post
 published: true
