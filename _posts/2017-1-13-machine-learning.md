@@ -17,5 +17,5 @@ published: true
 
 재귀신경망은 이 문제를 처리할 수 있다. 재귀신경망들은 내부에 피드백을 가지고 있으며, 그로인해 정보가 지속성을 가지도록 할수 있다.
 
-![](https://www.dropbox.com/s/3cxzh6z34utx9qw/RNN-rolled.png?dl=1){:height="100px"}
+![](https://www.dropbox.com/s/3cxzh6z34utx9qw/RNN-rolled.png?dl=1){:height="30px"}
 *루프를 가지고 있는 재귀신경망*
