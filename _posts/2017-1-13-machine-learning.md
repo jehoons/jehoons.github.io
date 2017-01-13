@@ -21,6 +21,13 @@ published: true
 
 **루프를 가지고 있는 재귀신경망**
 
+위 다이어그램에서, 신경망 묶음 $$A$$는 입력 $$X_t$$를 받아들이고 $$h_t$$를 출력으로 내보낸다.
+
+In the above diagram, a chunk of neural network, AA, looks at some input xtxt and outputs a value htht. A loop allows information to be passed from one step of the network to the next.
+
+
+
+
 
 
 
