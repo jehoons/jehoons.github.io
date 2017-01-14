@@ -69,6 +69,12 @@ LSTM은 장기 의존성 문제를 피하기 위해 명시적으로 설계되었
 
 모든 반복적 인 신경망은 신경망의 반복적 인 모듈 체인의 형태를 가진다. 표준 RNN에서이 반복 모듈은 단일 탄층과 같은 매우 간단한 구조를 갖습니다.
 
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/1szbjccvb228ckq/LSTM3-SimpleRNN.png?dl=1){:height="200px" .center-image}
+
+**그림.** 장기 종속성의 경우
+</div>
+
 
 (진행중)
 
