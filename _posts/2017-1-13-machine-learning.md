@@ -27,9 +27,10 @@ published: true
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/9n9r2ro3s5itb7c/RNN-unrolled.png?dl=1){:height="200px" .center-image}
+*루프를 푼 재귀신경망*
 </div>
 
-*루프를 푼 재귀신경망*
+
 
 이러한 재귀신경망의 체인같은 성질은 재귀신경망이 시퀀스와 리스트 데이터에 밀접하게 관련되어 있다는 것을 의미한다. 즉, 시퀀스와 리스트 데이터에 적용할수 있는 신경망의 자연스러운 구조라는 것이다. 과연 그런가? 
 
