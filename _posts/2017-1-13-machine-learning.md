@@ -7,9 +7,9 @@ published: true
 
 > 이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 꼼꼼히 읽어보기 위해서 번역합니다.
 
-### LSTM 네트워크의 이해
+## LSTM 네트워크의 이해
 
-#### Recurrent Neural Networks
+### Recurrent Neural Networks
 
 당신은 매 초마다 새로운 생각을 시작하는 것은 아니다. 이 글을 읽는 동안 당신은 이전 단어의 이해에 기반을 두어 단어들을 이해한다. 즉 당신은 모든 생각을 던져 버리고 새로운 생각을 시작하지는 않는다는 것이다. 그러므로 당신의 생각은 지속성을 가지고 있다. 
 
@@ -39,7 +39,8 @@ published: true
 
 이러한 성공의 핵심은 "LSTMs"를 사용하는 것인데, 이것은 매우 특별한 종류의 재귀적 신경망이며 많은 작업에 대해서 표준 버전보다 훨씬 효과적으로 작동한다. 재귀적 신경망을 기반으로 한 거의 모든 흥미 진진한 결과는 이들과 함께 달성된다. 그것이 바로 이 에세이에서 살펴볼 LSTM들이다.
 
-#### 장기적 종속성의 문제(The Problem of Long-Term Dependencies)
+### 장기적 종속성의 문제(The Problem of Long-Term Dependencies)
+
 
 
 
