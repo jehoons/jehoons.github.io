@@ -111,8 +111,11 @@ LSTM 네트워크에는 게이트라고 불리우는 구조에 의해 조심스�
 
 게이트는 선택적으로 정보를 전달할 수 있는 방법입니다. 그것들은 시그모이드 신경망 계층 pointwise 곱셈 연산으로 구성되어 있습니다.
 
-https://www.dropbox.com/s/3ba1tdnuep97ozl/LSTM3-gate.png?dl=0
-그림.
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/3ba1tdnuep97ozl/LSTM3-gate.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 시그모이드 계층은 0과 1사이의 숫자를 출력함으로써 각 구성요소의 얼마 만큼을 통과시켜야 할지를 기술합니다. 0 값은 "아무 것도 통과시키지 말 것"을 의미하고 1 값은 "모든 것을 통과시킬 것!"을 의미합니다.
 
