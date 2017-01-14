@@ -55,7 +55,7 @@ RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/g3v59uu75vwo1td/RNN-longtermdependencies.png?dl=1){:height="200px" .center-image}
 
-**그림.** 단기 종속성의 경우
+**그림.** 장기 종속성의 경우
 </div>
 
 이론적으로는 RNN이 이러한 "장기적 의존성"을 절대적으로 처리할 수 있다. 인간은 이러한 형태의 쉬운 문제를 해결하기 위해서 신중히 매개변수를 선택할 수 있다. 그러나 슬프게도.. 실질적으로는, RNN은 그러한 장기적 의존성문제를 해결하도록 학습할 수 있을 것 같지 않다. 이 문제는 Hochreiter (1991) [독일]와 Bengio, et al. (1994)에 의해서 깊이 있게 조사되었는데, 그들은 이 그것이 어려운 매우 근본적인 몇가지 이유를 발견하였다.
