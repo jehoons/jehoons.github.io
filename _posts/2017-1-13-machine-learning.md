@@ -159,8 +159,6 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 
 언어 모델 예제의 경우에는 단지 주어를 보았으므로 다음에 올 동사와 관련된 정보를 출력 할 수 있습니다. 예를 들어 주어가 단수인지 복수인지를 출력할 수 있으므로 다음에 오는 동사가 어떤 형태로 결합되어야 하는지 알 수 있습니다.
 
-
-
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/tppezhds8nvmb13/LSTM3-focus-o.png?dl=1){:height="200px" .center-image}
 
