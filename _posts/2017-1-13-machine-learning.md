@@ -127,30 +127,45 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 
 이전에 출현한 모든 단어들을 바탕으로 다음 단어를 예측하려고 시도하는 언어 모델의 예제로 돌아가 보겠습니다. 그러한 문제에서, 셀 상태에는 현재 대상의 성별이 포함될 수 있으므로 올바른 대명사를 사용할 수 있습니다. 새로운 주어가 보일 때, 우리는 이전 주어의 성을 잊기를 원할 것입니다.
 
-https://www.dropbox.com/s/dhereckrm8fuy2e/LSTM3-focus-f.png?dl=0
-그림
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/dhereckrm8fuy2e/LSTM3-focus-f.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 다음 단계는 우리가 셀의 상태로 저장할 새로운 정보가 무엇인지 결정하는 것입니다. 여기에는 두 부분이 있습니다. 먼저 "입력 게이트 계층"이라고 하는 시그모이드 계층이 갱신할 값을 결정합니다. 그 다음, tanh 계층은 상태에 추가될 수 있는 새로운 후보 값 $$\widetilde{C}_t$$ 벡터를 생성합니다. 다음 단계에서는 이 두 요소(무엇을 잊고 무엇을 기억할지에 관한 두 요소)를 결합하여 상태를 업데이트합니다.
 
 우리 언어 모델의 예제에서, 우리는 잊고자 하는 오래된 것(성별)을 대체하기 위해서 새로운 주어의 성별을 셀 상태에 추가하고자 합니다.
 
-https://www.dropbox.com/s/p20m79vxkddiukm/LSTM3-focus-i.png?dl=0
-그림.
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/p20m79vxkddiukm/LSTM3-focus-i.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 이제는 이전 셀 상태 $$C_{t-1}$$을 새로운 셀 상태 $$C_t$$로 갱신해야 합니다. 이전 단계에서는 수행해야할 작업을 결정하였기 때문에 우리는 단지 실제로 그것을 수행하기만 합니다.
 
 이전 상태에 $$f_t$$로 곱하면서 이전에 잊어 버리기로 결정한 것들을 잊습니다. 그런 다음 $$ i_{t} \widetilde{C}_t$$를 더합니다. 이 값은 새로운 후보 값으로써, 각 상태 값을 얼마나 많이 업데이트하기로 결정하였는지의 정도에 따라서 조정됩니다.
 
 언어 모델의 경우 이전 단계에서 결정한대로 이전 주어의 성별에 대한 정보를 삭제하고 새로운 정보를 추가합니다.
-https://www.dropbox.com/s/2h3xfa8neywp6pv/LSTM3-focus-C.png?dl=0
-그림.
+
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/2h3xfa8neywp6pv/LSTM3-focus-C.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 마지막으로 출력할 내용을 결정할 필요가 있습니다. 이 출력은 셀의 상태에 기반을 두지만 필터링된 버전이 됩니다. 먼저, 출력할 셀 상태의 일부분을 결정하는 시그모이드 레이어를 실행합니다. 그 다음에는 $$tanh$$를 통해 셀 상태를 설정하고 (값을 $$-1$$과 $$1$$ 사이로 밀어 넣으십시오) 시그널 게이트의 출력을 곱해서 우리가 결정한 부분만을 출력하게 합니다.
 
 언어 모델 예제의 경우에는 단지 주어를 보았으므로 다음에 올 동사와 관련된 정보를 출력 할 수 있습니다. 예를 들어 주어가 단수인지 복수인지를 출력할 수 있으므로 다음에 오는 동사가 어떤 형태로 결합되어야 하는지 알 수 있습니다.
 
-https://www.dropbox.com/s/tppezhds8nvmb13/LSTM3-focus-o.png?dl=0
-그림.
+
+
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/tppezhds8nvmb13/LSTM3-focus-o.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 ### LSTM의 변형(Variants on Long Short Term Memory)
 
