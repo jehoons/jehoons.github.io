@@ -4,10 +4,13 @@ date: '2017-1-4 10:00'
 layout: post
 published: true
 ---
+
 이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 좋은 내용이기 때문에 꼼꼼히 읽어보고 싶어서 번역합니다.
 
 ## LSTM 네트워크의 이해
+
 ### Recurrent Neural Networks
+
 당신은 매 초마다 새로운 생각을 시작하는 것은 아닙니다. 이 글을 읽는 동안 당신은 이전 단어의 이해에 기반을 두어 단어들을 이해합니다. 즉 당신은 모든 생각을 던져 버리고 언제나 새로운 생각을 시작하지는 않습니다. 그로 인해 당신의 생각은 지속성을 가질 수 있게 됩니다.
 
 전통적 신경망은 이러한 일을 할 수 없으며 큰 결점인 것 처럼 보입니다. 예를 들자면, 영화를 관람할 때 매 시간마다 어떤 종류의 이벤트가 발생하는지 분류하려고 한다고 상상해 봅시다. 전통적인 뉴럴네트워크를 이용하면 영화의 이전 사건에 대한 추론을 사용하여 어떻게 나중에 알려줄 (분류할 수) 수 있을지 확실하지 않습니다.
@@ -37,6 +40,7 @@ published: true
 이러한 성공의 핵심은 "LSTM 네트워크"를 사용하는 것인데, 이것은 매우 특별한 종류의 재귀적 신경망이며 많은 작업에 대해서 표준 버전의 재귀신경망보다 훨씬 효과적으로 작동합니다. 재귀적 신경망을 기반으로 한 거의 모든 흥미 진진한 결과는 이들과 함께 달성됩니다. 바로 이 에세이에서 살펴볼 LSTM 네트워크입니다.
 
 ### 장기적 종속성의 문제(The Problem of Long-Term Dependencies)
+
 RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 프레임의 이해를 알리는 것처럼 이전의 정보를 현재의 작업에 연결할 수 있다는 생각입니다. 만약 이를 수행할 수 있다면 RNN은 매우 유용할 것이다. 이것이 가능할까요? 그것은 경우에 따라 다릅니다.
 
 때로는 현재의 작업을 처리하기 위해서 단지 최근의 정보만을 살펴봐야 할때도 있습니다. 예를 들어, 이전 단어를 기반으로 다음 단어를 예측하려고 시도하는 언어 모델을 생각해 봅시다. 우리가 "the clouds are in the sky" 라는 문장에서 마지막 단어를 예측하려고 한다면, 우리는 더 이상의 정보를 필요로 하지 않습니다. 다음 단어가 sky가 될 것이란 것은 매우 분명합니다. 그러한 경우, 즉 관련된 정보와 그것을 필요로 하는 장소 사이의 간격이 작은 경우에는, RNN은 과거의 정보를 사용하는 방법을 배울 수 있습니다.
@@ -60,6 +64,7 @@ RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 
 고맙게도, LSTM 네트워크에는 이러한 문제가 없습니다!
 
 ### LSTM 네트워크
+
 Long Short Term Memory 네트워크 (일반적으로 "LSTM"이라고 함)는 특별한 종류의 RNN이며 장기 의존성을 학습할 수 있도록 설계되었습니다. 이것은 Hochreiter & Schmidhuber (1997)에 의해 소개되었고, 다음과 같은 업적을 남긴 많은 사람들에 의해서 개선되고 대중화되었습니다. 이들은 다양한 문제에 대해 대단히 잘 작동하며 현재 널리 사용되고 있습니다.
 
 LSTM은 장기 의존성 문제를 피하기 위해 명시적으로 설계되었습니다. 장기적 정보의 기억은 실질적으로 이 네트워크의 기본행동이며 그러므로 어렵게 배울 필요가 없습니다!
@@ -103,7 +108,7 @@ LSTM 네트워크에는 셀 상태를 보호하고 제어하기 위한 세 개�
 
 ### Step-by-Step LSTM Walk Through
 
-LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보를 결정하는 것입니다. 이 결정은 망각 게이트 계층이라고 불리는 시그모이드 계층에 의해서 이루어 집니다. 그것은 $$h_{t-1}$$과 $$x_t$$를 보고 셀 상태인 $$C_{t-1}$$에서 각 번에 대해서 00과 11사이의 숫자를 출력합니다. 11은 "완전히 보존하라"는 것을 지시하며 00은 "완전히 이것을 버려라"는 것을 지시합니다.
+LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보를 결정하는 것입니다. 이 결정은 망각 게이트 계층이라고 불리는 시그모이드 계층에 의해서 이루어 집니다. 그것은 $$h_{t-1}$$과 $$x_t$$를 보고 셀 상태인 $$C_{t-1}$$에서 각 번에 대해서 $$0$$과 $$1$$사이의 숫자를 출력합니다. $$1$$은 "완전히 보존하라"는 것을 지시하며 $$0$$은 "완전히 이것을 버려라"는 것을 지시합니다.
 
 이전에 출현한 모든 단어들을 바탕으로 다음 단어를 예측하려고 시도하는 언어 모델의 예제로 돌아가 보겠습니다. 그러한 문제에서, 셀 상태에는 현재 대상의 성별이 포함될 수 있으므로 올바른 대명사를 사용할 수 있습니다. 새로운 주어가 보일 때, 우리는 이전 주어의 성을 잊기를 원할 것입니다.
 
@@ -111,67 +116,60 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 
 다음 단계는 우리가 셀의 상태로 저장할 새로운 정보가 무엇인지 결정하는 것입니다. 여기에는 두 부분이 있습니다. 먼저 "입력 게이트 계층"이라고 하는 시그모이드 계층이 갱신할 값을 결정합니다. 그 다음, tanh 계층은 상태에 추가될 수 있는 새로운 후보 값 $$\widetilde{C}_t$$ 벡터를 생성합니다. 다음 단계에서는 이 두 요소(무엇을 잊고 무엇을 기억할지에 관한 두 요소)를 결합하여 상태를 업데이트합니다.
 
-우리 언어 모델의 예제에서, 우리는 잊고있는 오래된 것을 대체하기 위해 새로운 주체의 성별을 셀 상태에 추가하려고합니다.
-
-The next step is to decide what new information we’re going to store in the cell state. This has two parts. First, a sigmoid layer called the “input gate layer” decides which values we’ll update. Next, a tanh layer creates a vector of new candidate values, C~tC~t, that could be added to the state. In the next step, we’ll combine these two to create an update to the state.
-
-In the example of our language model, we’d want to add the gender of the new subject to the cell state, to replace the old one we’re forgetting.
+우리 언어 모델의 예제에서, 우리는 잊고자 하는 오래된 것(성별)을 대체하기 위해서 새로운 주어의 성별을 셀 상태에 추가하고자 합니다.
 
 그림.
 
-It’s now time to update the old cell state, Ct−1Ct−1, into the new cell state CtCt. The previous steps already decided what to do, we just need to actually do it.
+이제는 이전 셀 상태 $$C_{t-1}$$을 새로운 셀 상태 $$C_t$$로 갱신해야 합니다. 이전 단계에서는 수행해야할 작업을 결정하였기 때문에 우리는 단지 실제로 그것을 수행하기만 합니다.
 
-We multiply the old state by ftft, forgetting the things we decided to forget earlier. Then we add it∗C~tit∗C~t. This is the new candidate values, scaled by how much we decided to update each state value.
+이전 상태에 $$f_t$$로 곱하면서 이전에 잊어 버리기로 결정한 것들을 잊습니다. 그런 다음 $$ i_{t} \widetilde{C}_t$$를 더합니다. 이 값은 새로운 후보 값으로써, 각 상태 값을 얼마나 많이 업데이트하기로 결정하였는지의 정도에 따라서 조정됩니다.
 
-In the case of the language model, this is where we’d actually drop the information about the old subject’s gender and add the new information, as we decided in the previous steps.
-
-그림.
-
-Finally, we need to decide what we’re going to output. This output will be based on our cell state, but will be a filtered version. First, we run a sigmoid layer which decides what parts of the cell state we’re going to output. Then, we put the cell state through tanhtanh (to push the values to be between −1−1 and 11) and multiply it by the output of the sigmoid gate, so that we only output the parts we decided to.
-
-For the language model example, since it just saw a subject, it might want to output information relevant to a verb, in case that’s what is coming next. For example, it might output whether the subject is singular or plural, so that we know what form a verb should be conjugated into if that’s what follows next.
+언어 모델의 경우 이전 단계에서 결정한대로 이전 주어의 성별에 대한 정보를 삭제하고 새로운 정보를 추가합니다.
 
 그림.
 
-### Variants on Long Short Term Memory
-What I’ve described so far is a pretty normal LSTM. But not all LSTMs are the same as the above. In fact, it seems like almost every paper involving LSTMs uses a slightly different version. The differences are minor, but it’s worth mentioning some of them.
+마지막으로 출력할 내용을 결정할 필요가 있습니다. 이 출력은 셀의 상태에 기반을 두지만 필터링된 버전이 됩니다. 먼저, 출력할 셀 상태의 일부분을 결정하는 시그모이드 레이어를 실행합니다. 그 다음에는 $$tanh$$를 통해 셀 상태를 설정하고 (값을 $$-1$$과 $$1$$ 사이로 밀어 넣으십시오) 시그널 게이트의 출력을 곱해서 우리가 결정한 부분만을 출력하게 합니다.
 
-One popular LSTM variant, introduced by Gers & Schmidhuber (2000), is adding “peephole connections.” This means that we let the gate layers look at the cell state.
-
-그림.
-
-The above diagram adds peepholes to all the gates, but many papers will give some peepholes and not others.
-
-Another variation is to use coupled forget and input gates. Instead of separately deciding what to forget and what we should add new information to, we make those decisions together. We only forget when we’re going to input something in its place. We only input new values to the state when we forget something older.
+언어 모델 예제의 경우에는 단지 주어를 보았으므로 다음에 올 동사와 관련된 정보를 출력 할 수 있습니다. 예를 들어 주어가 단수인지 복수인지를 출력할 수 있으므로 다음에 오는 동사가 어떤 형태로 결합되어야 하는지 알 수 있습니다.
 
 그림.
 
-A slightly more dramatic variation on the LSTM is the Gated Recurrent Unit, or GRU, introduced by Cho, et al. (2014). It combines the forget and input gates into a single “update gate.” It also merges the cell state and hidden state, and makes some other changes. The resulting model is simpler than standard LSTM models, and has been growing increasingly popular.
+### LSTM의 변형(Variants on Long Short Term Memory)
+
+지금까지 설명한 것은 꽤 일반적인 LSTM 네트워크입니다. 그러나 모든 LSTM 네트워크가 위와 동일한 것은 아닙니다. 사실, LSTM 네트워크를 포함하는 거의 모든 연구가 조금씩 상이한 버전을 사용하는 것처럼 보입니다. 그 차이는 사소하지만 그 중 일부는 언급 할만한 가치가 있습니다.
+
+Gers & Schmidhuber (2000)가 소개한 인기있는 LSTM 네트워크의 변종 중 한가지는 "peephole connections"을 추가하는 것입니다. 이것은 게이트 레이어가 셀 상태를 보게 한다는 것을 의미합니다.
 
 그림.
 
-These are only a few of the most notable LSTM variants. There are lots of others, like Depth Gated RNNs by Yao, et al. (2015). There’s also some completely different approach to tackling long-term dependencies, like Clockwork RNNs by Koutnik, et al. (2014).
+위의 다이어그램은 모든 게이트에 peephole을 추가하고 있습니다만, 많은 논문들이 peephole을 일부 게이트에만 추가하거나 다른 논문들에서는 peephole을 추가하지 않습니다.
 
-Which of these variants is best? Do the differences matter? Greff, et al. (2015) do a nice comparison of popular variants, finding that they’re all about the same. Jozefowicz, et al. (2015) tested more than ten thousand RNN architectures, finding some that worked better than LSTMs on certain tasks.
+또 다른 변형은 망각(forget) 및 입력이 결합된 게이트를 사용하는 것입니다. 여기서는 망각할 정보와 새로운 정보를 추가해야하는 정보를 별개로써 결정하는 대신, 우리는 이러한 결정을 함께합니다. 그 자리에 무언가를 입력 할 때에만 잊어 버립니다. 우리는 더 오래된 것을 망각할 때에만 새로운 값을 그 상태에 입력합니다.
 
-### Conclusion
+그림.
 
-Earlier, I mentioned the remarkable results people are achieving with RNNs. Essentially all of these are achieved using LSTMs. They really work a lot better for most tasks!
+LSTM 네트워크에 조금 더 극적인 변종은 Gated Recurrent Unit(GRU)이다. 이것은 (Cho et al., 2014)에 의해서 도입되었다. 이것은 망각 게이트와 입력 게이트를 하나의 "업데이트 게이트"에 결합합니다. 또한 셀 상태와 숨겨진 상태를 병합하고 다른 변경 작업도 수행합니다. 결과로 생성 된 모델은 표준 LSTM 네트워크 모델보다 간단하며 점차 대중화되고 있습니다.
 
-Written down as a set of equations, LSTMs look pretty intimidating. Hopefully, walking through them step by step in this essay has made them a bit more approachable.
+그림.
 
-LSTMs were a big step in what we can accomplish with RNNs. It’s natural to wonder: is there another big step? A common opinion among researchers is: “Yes! There is a next step and it’s attention!” The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs. In fact, Xu, et al. (2015) do exactly this – it might be a fun starting point if you want to explore attention! There’s been a number of really exciting results using attention, and it seems like a lot more are around the corner…
+이들은 가장 주목할 만한 LSTM 네트워크의 변종 중 단지 몇 가지에 지나지 않습니다. (Yao et al., 2015)에 의한 Depth Gated RNNs 과 같은 많은 것들이 있습니다. (Koutnik et al., 2014)에 의한 Clockwork RNNs와 같은 장기 의존성에 대한 완전히 다른 접근법도 있습니다.
 
-Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer & Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!
+이러한 변종중에서 어느 것이 최상일까요? 그런 차이들이 중요할까요? (Greff et al., 2015)는 인기있는 변종을 잘 비교하였고, 그들이 거의 동일하다는 것을 알게 되었습니다. (Jozefowicz et al., 2015)는 10,000 개 이상의 RNN 아키텍처를 테스트하여 특정 작업에서 LSTM보다 더 잘 작동하는 일부를 찾아 내기도 하였습니다.
+
+### 결론
+
+사람들이 RNN으로 달성한 주목할만한 결과들을 언급하였습니다. 본질적으로 이들 모두는 LSTM 네트워크를 사용하여 달성되었습니다. 그들은 실제로 대부분의 작업에 대해서 (표준 재귀신경망보다) 더 잘 작동합니다!
+
+LSTM 네트워크는 일련의 방정식으로 작성된 것으로 매우 두렵게 보입니다. 바라건대, 이 에세이를 통해서 단계별로 밟아 나간다면 좀 더 접근하기 쉬울 것입니다.
+
+LSTM 네트워크는 RNN을 통해서 도달할 수 있었던 중요한 발자취입니다. 다음과 같이 궁금해 하는 것은 당연합니다: 또 다른 큰 걸음이 있습니까? 연구자들의 일반적 의견은 "예! 다음 단계가 있습니다만, 주의를 기울이십시오". 그 아이디어는 RNN의 모든 단계에서 정보를 수집하고, 좀 더 큰 정보의 컬렉션에서 바라보는 것입니다. 예를 들어 RNN을 사용하여 이미지를 설명하는 캡션을 만드는 경우 이미지의 일부를 선택하여 출력하는 모든 단어를 볼 수 있습니다. 사실, (Xu et al., 2015) 정확하게 이것을 하십시오 - 당신이 주의(attention)를 탐구하고 싶다면, 이것은 재미있는 시작점일지도 모릅니다. 주의를 이용하여 정말로 흥미 진진한 결과들이 많이 나왔고 모퉁이를 돌면 훨씬 더 많은 흥미로운 것들이 있을 것입니다.
+
+주의는 RNN 연구에서 흥미로운 유일한 주제는 아닙니다. 예를 들어, (Kalchbrenner et al., 2015)의 Grid LSTMs는 매우 유망해 보입니다. 생성 모델에서 RNN을 사용하여 작업 (예 : Gregor, et al. (2015), Chung, et al. (2015), Bayer & Osendorfer (2015) 하는 방법도 매우 흥미로와 보입니다. 지난 몇년 동안은 재발성 신경 네트워크에 대한 흥미 진진한 시간이었습니다.
 
 ### Acknowledgments
 
-I’m grateful to a number of people for helping me better understand LSTMs, commenting on the visualizations, and providing feedback on this post.
+LSTM 네트워크를 더 잘 이해하고, 시각화에 대해서 의견을 제시해 주고, 이 게시물에 대한 피드백을 제공해 주신 수많은 사람들에게 감사드립니다.
 
-I’m very grateful to my colleagues at Google for their helpful feedback, especially Oriol Vinyals, Greg Corrado, Jon Shlens, Luke Vilnis, and Ilya Sutskever. I’m also thankful to many other friends and colleagues for taking the time to help me, including Dario Amodei, and Jacob Steinhardt. I’m especially thankful to Kyunghyun Cho for extremely thoughtful correspondence about my diagrams.
+특히 Google의 동료 인 Oriol Vinyals, Greg Corrado, Jon Shlens, Luke Vilnis 및 Ilya Sutskever에게 감사의 말을 전합니다. Dario Amodei와 Jacob Steinhardt를 포함하여 나를 도울 시간을내어 주신 다른 많은 친구들과 동료들에게도 감사드립니다. 특히 조경현에게는 나의 다이어그램에 대한 매우 사려 깊은 서신에 감사드립니다.
 
-Before this post, I practiced explaining LSTMs during two seminar series I taught on neural networks. Thanks to everyone who participated in those for their patience with me, and for their feedback.
-
-
-
-(진행중)
+이 게시물을 쓰기 전에 저는 신경망에 대해 가르친 두 개의 세미나 시리즈 중 LSTM 네트워크를 설명했습니다. 그들의 인내심과 저의 피드백에 참여한 모든 분들께 감사드립니다.
