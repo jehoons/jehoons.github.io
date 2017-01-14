@@ -1,5 +1,5 @@
 ---
-title: 'LSTM 네트워크의 이해'
+title: 'Understanding LSTM Networks'
 date: '2017-1-4 10:00'
 layout: post
 published: true
