@@ -57,6 +57,8 @@ RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/g3v59uu75vwo1td/RNN-longtermdependencies.png?dl=1){:height="200px" .center-image}
 
+**그림.** 단기 종속성의 경우
+</div>
 
 
 (진행중)
