@@ -19,6 +19,7 @@ published: true
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/3cxzh6z34utx9qw/RNN-rolled.png?dl=1){:height="200px" .center-image}
+
 *루프를 가지고 있는 재귀신경망*
 </div>
 
@@ -28,6 +29,7 @@ published: true
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/9n9r2ro3s5itb7c/RNN-unrolled.png?dl=1){:height="200px" .center-image}
+
 *루프를 푼 재귀신경망*
 </div>
 
