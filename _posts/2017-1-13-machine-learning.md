@@ -67,7 +67,7 @@ Long Short Term Memory 네트워크 (일반적으로 "LSTM"이라고 함)는 특
 
 LSTM은 장기 의존성 문제를 피하기 위해 명시적으로 설계되었다. 장기적 정보의 기억은 실질적으로 이 네트워크의 기본행동이며 그러므로 어렵게 배울 필요가 없다!
 
-모든 재귀적 신경망은 신경망의 반복적인 모듈 체인의 형태를 가진다. 표준 RNN에서 이러한 재귀적을 반복하는 모듈은 단일 탄층과 같은 매우 간단한 구조를 갖습니다.
+모든 재귀적 신경망은 신경망의 반복적인 모듈 체인의 형태를 가진다. 표준 RNN에서 이러한 재귀적을 반복하는 모듈은 단일의 tanh 계층처럼 같은 매우 간단한 구조를 가진다. 
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/1szbjccvb228ckq/LSTM3-SimpleRNN.png?dl=1){:height="200px" .center-image}
