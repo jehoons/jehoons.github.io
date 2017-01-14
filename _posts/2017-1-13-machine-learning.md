@@ -171,20 +171,29 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 
 Gers & Schmidhuber (2000)가 소개한 인기있는 LSTM 네트워크의 변종 중 한가지는 "peephole connections"을 추가하는 것입니다. 이것은 게이트 레이어가 셀 상태를 보게 한다는 것을 의미합니다.
 
-https://www.dropbox.com/s/juj3x76hehw0izy/LSTM3-var-peepholes.png?dl=0
-그림.
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/juj3x76hehw0izy/LSTM3-var-peepholes.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 위의 다이어그램은 모든 게이트에 peephole을 추가하고 있습니다만, 많은 논문들이 peephole을 일부 게이트에만 추가하거나 다른 논문들에서는 peephole을 추가하지 않습니다.
 
 또 다른 변형은 망각(forget) 및 입력이 결합된 게이트를 사용하는 것입니다. 여기서는 망각할 정보와 새로운 정보를 추가해야하는 정보를 별개로써 결정하는 대신, 우리는 이러한 결정을 함께합니다. 그 자리에 무언가를 입력 할 때에만 잊어 버립니다. 우리는 더 오래된 것을 망각할 때에만 새로운 값을 그 상태에 입력합니다.
 
-https://www.dropbox.com/s/9jb6sgyqopdj29s/LSTM3-var-tied.png?dl=0
-그림.
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/9jb6sgyqopdj29s/LSTM3-var-tied.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 LSTM 네트워크에 조금 더 극적인 변종은 Gated Recurrent Unit(GRU)이다. 이것은 (Cho et al., 2014)에 의해서 도입되었다. 이것은 망각 게이트와 입력 게이트를 하나의 "업데이트 게이트"에 결합합니다. 또한 셀 상태와 숨겨진 상태를 병합하고 다른 변경 작업도 수행합니다. 결과로 생성 된 모델은 표준 LSTM 네트워크 모델보다 간단하며 점차 대중화되고 있습니다.
 
-https://www.dropbox.com/s/c339wzxkt1twfux/LSTM3-var-GRU.png?dl=0
-그림.
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/c339wzxkt1twfux/LSTM3-var-GRU.png?dl=1){:height="200px" .center-image}
+
+**그림.** 
+</div>
 
 이들은 가장 주목할 만한 LSTM 네트워크의 변종 중 단지 몇 가지에 지나지 않습니다. (Yao et al., 2015)에 의한 Depth Gated RNNs 과 같은 많은 것들이 있습니다. (Koutnik et al., 2014)에 의한 Clockwork RNNs와 같은 장기 의존성에 대한 완전히 다른 접근법도 있습니다.
 
