@@ -79,7 +79,13 @@ LSTM은 장기 의존성 문제를 피하기 위해 명시적으로 설계되었
 
 LSTM 네트워크들도 이러한 체인구조를 가지지만, 그 반복 모듈들의 구조는 상이합니다. 단일의 뉴럴네트워크 구조를 가지는 대신에, 아주 특별한 방식으로 상호작용하는 4개의 계층을 가집니다.
 
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/1szbjccvb228ckq/LSTM3-SimpleRNN.png?dl=1){:height="200px" .center-image}
+
 **그림.** The repeating module in an LSTM contains four interacting layers.
+</div>
+
+
 
 무슨 일이 일어나는지에 대한 세부적 사항은 걱정할 필요가 없습니다. 우리는 나중에 LSTM 다이어그램을 단계적으로 살펴보도록 할 것이니까요. 지금은 사용하는 표기법에 익숙해 지도록 노력해 봅시다.
 
