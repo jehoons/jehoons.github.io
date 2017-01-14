@@ -20,7 +20,7 @@ published: true
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/3cxzh6z34utx9qw/RNN-rolled.png?dl=1){:height="200px" .center-image}
 
-*루프를 가지고 있는 재귀신경망*
+**그림.** 루프를 가지고 있는 재귀신경망
 </div>
 
 위 다이어그램에서, 신경망 묶음 $$A$$는 입력 $$X_t$$를 받아들이고 $$h_t$$를 출력으로 내보낸다. 여기서 루프는 정보가 네트워크의 하나의 단계로부터 네트워크의 다음으로 통과하도록 허용한다.
@@ -30,7 +30,7 @@ published: true
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/9n9r2ro3s5itb7c/RNN-unrolled.png?dl=1){:height="200px" .center-image}
 
-*루프를 푼 재귀신경망*
+**그림.** 루프를 푼 재귀신경망
 </div>
 
 이러한 재귀신경망의 체인같은 성질은 재귀신경망이 시퀀스와 리스트 데이터에 밀접하게 관련되어 있다는 것을 의미한다. 즉, 시퀀스와 리스트 데이터에 적용할수 있는 신경망의 자연스러운 구조라는 것이다. 과연 그런가? 
@@ -47,7 +47,7 @@ RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/ktw35gp24wfob16/RNN-shorttermdepdencies.png?dl=1){:height="200px" .center-image}
 
-*단기 종속성의 경우*
+**그림.** 단기 종속성의 경우
 </div>
 
 
