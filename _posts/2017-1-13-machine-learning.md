@@ -19,9 +19,8 @@ published: true
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/3cxzh6z34utx9qw/RNN-rolled.png?dl=1){:height="200px" .center-image}
-</div>
-
 *루프를 가지고 있는 재귀신경망*
+</div>
 
 위 다이어그램에서, 신경망 묶음 $$A$$는 입력 $$X_t$$를 받아들이고 $$h_t$$를 출력으로 내보낸다. 여기서 루프는 정보가 네트워크의 하나의 단계로부터 네트워크의 다음으로 통과하도록 허용한다.
 
