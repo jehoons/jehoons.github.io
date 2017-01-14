@@ -207,6 +207,6 @@ LSTM 네트워크는 RNN을 통해서 도달할 수 있었던 중요한 발자�
 
 주의는 RNN 연구에서 흥미로운 유일한 주제는 아닙니다. 예를 들어, (Kalchbrenner et al., 2015)의 Grid LSTMs는 매우 유망해 보입니다. 생성 모델에서 RNN을 사용하여 작업 (예 : Gregor, et al. (2015), Chung, et al. (2015), Bayer & Osendorfer (2015) 하는 방법도 매우 흥미로와 보입니다. 지난 몇년 동안은 재발성 신경 네트워크에 대한 흥미 진진한 시간이었습니다.
 
-이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 좋은 내용이기 때문에 꼼꼼히 읽어보고 싶어서 번역합니다.
+> 이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 좋은 내용이기 때문에 꼼꼼히 읽어보고 싶어서 번역합니다.
 
 
