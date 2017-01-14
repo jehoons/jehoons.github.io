@@ -44,6 +44,11 @@ RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 
 
 때로는 현재의 작업을 처리하기 위해서 단지 최근의 정보만을 살펴봐야 할때도 있다. 예를 들어, 이전 단어를 기반으로 다음 단어를 예측하려고 시도하는 언어 모델을 생각해 보자. 우리가 "the clouds are in the sky" 라는 문장에서 마지막 단어를 예측하려고 한다면, 우리는 더 이상의 정보를 필요로 하지 않는다. 다음 단어가 sky가 될 것이란 것은 매우 분명하다. 그러한 경우, 즉 관련된 정보와 그것을 필요로 하는 장소 사이의 간격이 작은 경우에는, RNN은 과거의 정보를 사용하는 방법을 배울 수 있습니다.
 
+<div style="text-align:center" markdown="1">
+![](https://www.dropbox.com/s/ktw35gp24wfob16/RNN-shorttermdepdencies.png?dl=1){:height="200px" .center-image}
+
+*단기 종속성의 경우*
+</div>
 
 
 (진행중)
