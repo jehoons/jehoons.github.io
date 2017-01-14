@@ -5,7 +5,7 @@ layout: post
 published: true
 ---
 
-이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 좋은 내용이기 때문에 꼼꼼히 읽어보고 싶어서 번역합니다.
+LSTM 네트워크에 관한 이 문서의 원문은 [여기](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)에서 확인할 수 있습니다. 좋은 내용이기 때문에 꼼꼼히 읽어보고 싶어서 번역합니다.
 
 ### Recurrent Neural Networks
 
