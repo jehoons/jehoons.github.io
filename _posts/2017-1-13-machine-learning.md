@@ -85,8 +85,6 @@ LSTM 네트워크들도 이러한 체인구조를 가지지만, 그 반복 모�
 **그림.** The repeating module in an LSTM contains four interacting layers.
 </div>
 
-
-
 무슨 일이 일어나는지에 대한 세부적 사항은 걱정할 필요가 없습니다. 우리는 나중에 LSTM 다이어그램을 단계적으로 살펴보도록 할 것이니까요. 지금은 사용하는 표기법에 익숙해 지도록 노력해 봅시다.
 
 **그림.**
