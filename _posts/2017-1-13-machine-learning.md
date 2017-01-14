@@ -51,9 +51,8 @@ RNN의 매력중 한가지는 이전 비디오 프레임을 사용하여 현재 
 </div>
 
 그러나, 더 많은 맥락을 필요로 하는 경우들도 있다.
-But there are also cases where we need more context. Consider trying to predict the last word in the text “I grew up in France… I speak fluent French.” Recent information suggests that the next word is probably the name of a language, but if we want to narrow down which language, we need the context of France, from further back. It’s entirely possible for the gap between the relevant information and the point where it is needed to become very large.
 
-Unfortunately, as that gap grows, RNNs become unable to learn to connect the information.
+"I grew up in France... I speak fluent French." 라는 텍스트에서 마지막 단어를 예측하려고 해보자. 마지막 단어의 최근 정보는 다음에 오는 단어가 아마도 언어의 이름일것이라는 것을 제안할수 있을 것이지만, 어떤 언어인지로 좁히기 위해서는, 우리는 더 뒤로부터 france의 맥락을 필요로 한다. 연관된 정보와 그것이 필요로 해지는 시점간의 간격이 매우 커지게 되는 상황은 전적으로 가능하다. 불행히도 그 격차가 커지면서 RNN은 정보를 연결하는 법을 배울 수 없게 된다.
 
 (진행중)
 
