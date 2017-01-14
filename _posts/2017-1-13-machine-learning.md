@@ -72,7 +72,7 @@ LSTM은 장기 의존성 문제를 피하기 위해 명시적으로 설계되었
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/1szbjccvb228ckq/LSTM3-SimpleRNN.png?dl=1){:height="200px" .center-image}
 
-**그림.** 장기 종속성의 경우
+**그림.** 싱글 tanh 계층을 가지는 간단한 RNN의 예시
 </div>
 
 
