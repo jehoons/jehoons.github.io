@@ -169,6 +169,8 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 
 Gers과 Schmidhuber (2000)에 의해서 소개된 인기있는 LSTM 네트워크의 변종 중 한가지는 `Peephole connections`가 추가된 모델입니다. 이것은 게이트 레이어가 셀 상태를 보게 한다는 것을 의미합니다.
 
+> 주) Peephole은 엿보기라는 의미입니다.
+
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/juj3x76hehw0izy/LSTM3-var-peepholes.png?dl=1){:height="200px" .center-image}
 
