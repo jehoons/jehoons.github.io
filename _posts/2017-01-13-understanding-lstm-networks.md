@@ -57,7 +57,7 @@ RNN의 중요한 매력중 한가지는 이전의 비디오 프레임을 사용�
  데이터가 장기적 종속성을 가지는 경우 
 </div>
 
-이론적으로는 RNN이 이러한 "장기적 의존성"을 절대적으로 처리할 수는 있습니다. 인간이 이러한 형태의 쉬운 문제를 해결하기 위해서 신중히 매개변수를 선택할 수 있기 때문입니다. 그러나 슬프게도 실질적으로 RNN은 그러한 장기적 의존성 문제를 해결하도록 쉽게 학습할 수 있을 것 같지는 않습니다. 이 문제는 Hochreiter (1991) [독일]와 Bengio, et al. (1994)에 의해서 깊이 있게 조사되었는데, 그들은 이러한 장기적 의존성을 학습하는 문제가 해결되기 어려운 몇 가지의 매우 근본적 이유를 발견하였습니다.
+이론적으로는 RNN이 이러한 "장기적 의존성"을 절대적으로 처리할 수는 있습니다. 인간이 이러한 형태의 쉬운 문제를 해결하기 위해서 신중히 매개변수를 선택할 수 있기 때문입니다. 그러나 슬프게도 실질적으로 RNN은 그러한 장기적 의존성 문제를 해결하도록 쉽게 학습할 수 있을 것 같지는 않습니다. 이 문제는 Hochreiter (1991) [독일]와 Bengio (1994)에 의해서 깊이 있게 조사되었는데, 그들은 이러한 장기적 의존성을 학습하는 문제가 해결되기 어려운 몇 가지의 매우 근본적 이유를 발견하였습니다.
 
 고맙게도, LSTM 네트워크에는 이러한 문제가 없습니다. 
 
@@ -128,7 +128,7 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/dhereckrm8fuy2e/LSTM3-focus-f.png?dl=1){:height="200px" .center-image}
 
-
+망각 게이트 레이어 
 </div>
 
 다음 단계는 우리가 셀의 상태로 저장할 새로운 정보가 무엇인지 결정하는 것입니다. 여기에는 두 부분이 있습니다. 먼저 "입력 게이트 계층"이라고 하는 시그모이드 계층이 갱신할 값을 결정합니다. 그 다음, $$tanh$$ 계층은 상태에 추가될 수 있는 새로운 후보 값 $$\widetilde{C}_t$$ 벡터를 생성합니다. 다음 단계에서는 이 두 요소를 결합하여 상태를 업데이트합니다.
@@ -138,7 +138,7 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/p20m79vxkddiukm/LSTM3-focus-i.png?dl=1){:height="200px" .center-image}
 
- 망각 게이트 레이어 
+업데이트할 새로운 정보가 무엇인지 결정하기
 </div>
 
 이제는 이전 셀 상태 $$C_{t-1}$$을 새로운 셀 상태 $$C_t$$로 갱신해야 합니다. 이전 단계에서는 수행해야할 작업을 결정하였기 때문에 우리는 단지 실제로 그것을 수행하기만 합니다.
@@ -150,7 +150,7 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/2h3xfa8neywp6pv/LSTM3-focus-C.png?dl=1){:height="200px" .center-image}
 
- 셀의 상태를 갱신할 새로운 정보를 결정하는 단계 
+셀의 상태를 새로운 정보로 갱신하기 
 </div>
 
 마지막으로 출력할 내용을 결정할 필요가 있습니다. 이 출력은 셀의 상태에 기반을 두지만 필터링된 버전이 됩니다. 먼저, 출력할 셀 상태의 일부분을 결정하는 시그모이드 레이어를 실행합니다. 그 다음에는 $$tanh$$를 통해 셀 상태를 설정하고 (값을 $$-1$$과 $$1$$ 사이로 밀어 넣으십시오) 시그널 게이트의 출력을 곱해서 우리가 결정한 부분만을 출력하게 합니다.
@@ -160,29 +160,29 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/tppezhds8nvmb13/LSTM3-focus-o.png?dl=1){:height="200px" .center-image}
 
- 셀의 상태를 갱신 
+출력한 내용을 결정하기
 </div>
 
 ### LSTM의 변종(Variants on Long Short Term Memory)
 
 지금까지 설명한 것은 꽤 일반적인 LSTM 네트워크입니다. 그러나 모든 LSTM 네트워크가 위와 동일한 것은 아닙니다. 사실, LSTM 네트워크를 포함하는 거의 모든 연구가 조금씩 상이한 버전을 사용하는 것처럼 보입니다. 그 차이는 사소하지만 그 중 일부는 언급 할만한 가치가 있습니다.
 
-Gers & Schmidhuber (2000)가 소개한 인기있는 LSTM 네트워크의 변종 중 한가지는 `peephole connections`을 추가하는 것입니다. 이것은 게이트 레이어가 셀 상태를 보게 한다는 것을 의미합니다.
+Gers과 Schmidhuber (2000)에 의해서 소개된 인기있는 LSTM 네트워크의 변종 중 한가지는 `Peephole connections`가 추가된 모델입니다. 이것은 게이트 레이어가 셀 상태를 보게 한다는 것을 의미합니다.
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/juj3x76hehw0izy/LSTM3-var-peepholes.png?dl=1){:height="200px" .center-image}
 
- `peephole connections`가 추가 된 LSTM의 변종 
+ `Peephole connections`가 추가 된 LSTM의 변종 
 </div>
 
-위의 다이어그램은 모든 게이트에 `peephole`을 추가하고 있습니다만, 많은 논문들이 `peephole`을 일부 게이트에만 추가하거나 다른 논문들에서는 `peephole`을 추가하지 않습니다.
+위의 다이어그램은 모든 게이트에 `peephole`을 추가하고 있습니다만, 많은 논문들이 `peephole`을 일부 게이트에만 추가하거나 또는 다른 논문들에서는 `peephole`을 추가하고 있지 않습니다.
 
 또 다른 변형은 망각(forget) 및 입력이 결합된 게이트를 사용하는 것입니다. 여기서는 망각할 정보와 새로운 정보를 추가해야하는 정보를 별개로써 결정하는 대신, 우리는 이러한 결정을 함께합니다. 그 자리에 무언가를 입력 할 때에만 잊어 버립니다. 우리는 더 오래된 것을 망각할 때에만 새로운 값을 그 상태에 입력합니다.
 
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/9jb6sgyqopdj29s/LSTM3-var-tied.png?dl=1){:height="200px" .center-image}
 
- 망각과 입력이 결합된 게이트
+망각과 입력이 결합된 게이트
 </div>
 
 LSTM 네트워크에 조금 더 극적인 변종은 Gated Recurrent Unit(GRU)입니다. 이것은 (Cho et al., 2014)에 의해서 도입되었습니다. 이것은 망각 게이트와 입력 게이트를 하나의 "업데이트 게이트"에 결합합니다. 또한 셀 상태와 숨겨진 상태를 병합하고 다른 변경 작업도 수행합니다. 결과로 생성 된 모델은 표준 LSTM 네트워크 모델보다 간단하며 점차 대중화되고 있습니다.
@@ -190,7 +190,7 @@ LSTM 네트워크에 조금 더 극적인 변종은 Gated Recurrent Unit(GRU)입
 <div style="text-align:center" markdown="1">
 ![](https://www.dropbox.com/s/c339wzxkt1twfux/LSTM3-var-GRU.png?dl=1){:height="200px" .center-image}
 
- Gated Recurrent Unit(GRU)
+Gated Recurrent Unit(GRU)
 </div>
 
 이들은 가장 주목할 만한 LSTM 네트워크의 변종 중 단지 몇 가지에 지나지 않습니다. (Yao et al., 2015)에 의한 Depth Gated RNNs 과 같은 많은 것들이 있습니다. (Koutnik et al., 2014)에 의한 Clockwork RNNs와 같은 장기 의존성에 대한 완전히 다른 접근법도 있습니다.
@@ -205,4 +205,5 @@ LSTM 네트워크는 일련의 방정식으로 작성된 것으로 처음에는 
 
 LSTM 네트워크는 RNN을 통해서 도달할 수 있었던 중요한 발자취입니다. 다음과 같이 궁금해 하는 것은 당연합니다: 또 다른 큰 걸음이 있습니까? 연구자들의 일반적 의견은 "예! 다음 단계가 있습니다만, 주의를 기울이십시오". 그 아이디어는 RNN의 모든 단계에서 정보를 수집하고, 좀 더 큰 정보의 컬렉션에서 바라보는 것입니다. 예를 들어 RNN을 사용하여 이미지를 설명하는 캡션을 만드는 경우 이미지의 일부를 선택하여 출력하는 모든 단어를 볼 수 있습니다. 사실, (Xu et al., 2015) 정확하게 이것(역자: 주의와 관련한 연구)을 하십시오 - 주의(attention)는 정말로 재미있는 연구의 시작점인지 모릅니다. 주의를 이용하여 벌써 흥미 진진한 결과들이 많이 나왔고, 모퉁이를 돌면 훨씬 더 흥미로운 것들이 많이 있을 것입니다.
 
-RNN연구에서 주의가 유일하게 흥분되는 주제는 아닙니다. 예를 들어, (Kalchbrenner et al., 2015)의 Grid LSTMs는 매우 유망해 보입니다. 또한, 생성 모델에서 RNN을 사용하여 작업 (예 : Gregor, et al. (2015), Chung, et al. (2015), Bayer & Osendorfer (2015) 하는 방법도 매우 흥미로워 보입니다. 지난 몇년 동안은 재발성 신경 네트워크에 대한 흥미 진진한 시간이었습니다.
+RNN연구에서 주의가 유일하게 흥분되는 주제는 아닙니다. 예를 들어, (Kalchbrenner et al., 2015)의 Grid LSTMs는 매우 유망해 보입니다. 또한, 생성 모델에서 RNN을 사용한 연구들, 예를 들면 (Gregor et al. 2015), (Chung et al., 2015), (Bayer and Osendorfer, 2015) 또한 매우 흥미로워 보입니다. 이와 같이 지난 몇 년간은 재발성 신경망이 진보한 매우 흥미 진진한 시기였습니다.
+
