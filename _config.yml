@@ -11,7 +11,7 @@ collections:
     output: true
 name: BabyR
 description: Baby Researcher
-avatar: https://github.com/jehoons/jehoons.github.io/blob/master/images/jekyll-logo.png
+avatar: https://github.com/jehoons/jehoons.github.io/blob/master/images/jekyll-logo.png?raw=true
 footer-links:
   dribbble: 
   email: song.jehoon@gmail.com
