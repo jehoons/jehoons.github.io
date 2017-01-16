@@ -5,7 +5,7 @@ layout: post
 published: true
 ---
 
-행렬분해 기반의 모델은 암시적 피드백, 일시적 영향, 신뢰수준과 같은 추가 정보의 통합을 허용하며, 최근 네플릭스 프라이즈 대회를 통해 입증된 바와 같이 고전적인 최단거리의 이웃(nearest-neighbor)에 기반을 둔 모델들보다 우수합니다. 이 포스트에서는 요즘 인기있는 딥러닝 도구인 tensorflow를 이용하여 행렬을 분해하는 방법을 다루어 보겠습니다. 
+컨텐츠권장 시스템의 구현을 위해서 최근 행렬분해 기반의 모델이 인기가 높아지고 있습니다. 행렬분해 기반의 모델은 암시적 피드백, 일시적 영향, 신뢰수준과 같은 추가 정보의 통합을 허용하며, 네플릭스 프라이즈 대회를 통해 입증된 바와 같이 고전적인 최단거리의 이웃(nearest-neighbor)에 기반을 둔 모델들보다 우수합니다. 이 포스트에서는 요즘 인기있는 딥러닝 도구인 tensorflow를 이용하여 행렬을 분해하는 방법을 다루어 보겠습니다. 
 
 ### Matrix factorization for recommender systems
 
@@ -18,4 +18,4 @@ published: true
 > Tensorflow의 출시와 함께, 여러 개발자들이 이를 이용한 알고리즘을 개발하려고 노력중입니다. 여기서는 tensorflow를 이용한 행렬의 분해에 관한 하나의 시도를 소개합니다. 원문은 [여기](...)에서 확인할 수 있습니다.
 > [recommender systems]({{ site.url }}/assets/papers/Koren et al. - 2009 - Matrix factorization techniques for recommender sy.pdf) 
 
-> 작업중입니다.
+> 작업중... 
