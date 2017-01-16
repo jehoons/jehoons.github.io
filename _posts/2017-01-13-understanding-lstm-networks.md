@@ -17,6 +17,7 @@ LSTM (Long Short-Term Memory)네트워크에 관한 이 문서의 원문은 [여
 
 <div style="text-align:center" markdown="1">
     ![]({{ site.url }}/assets/images/RNN-rolled.png){:height="200px"}
+    
     피드백 회로를 가지고 있는 재귀적 신경망
 </div>
 
