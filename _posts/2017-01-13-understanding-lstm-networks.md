@@ -16,7 +16,7 @@ LSTM (Long Short-Term Memory)네트워크에 관한 이 문서의 원문은 [여
 재귀적 신경망은 이런 문제를 처리할 수 있습니다. 재귀적 신경망은 내부에 피드백 회로를 가지고 있는데, 이러한 구조적 특징 덕분에 정보가 지속적으로 처리되도록 할 수 있습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/RNN-rolled.png){:height="200px"}
+![]({{ site.url }}/assets/images/RNN-rolled.png){:height="200px"}
 
 피드백 회로를 가지고 있는 재귀적 신경망
 </div>
@@ -26,8 +26,9 @@ LSTM (Long Short-Term Memory)네트워크에 관한 이 문서의 원문은 [여
 이러한 루프들은 재귀적 신경망을 다소 신비하게 보이도록 할지 모릅니다. 반면, 조금 더 생각해보면 보통의 신경망과 완전히 다르지는 않다는 것을 알 수 있습니다. 재귀적 신경망은 서로 다른 시점에서 작동하도록 되어있는 동일 네트워크의 여러 사본으로 생각할 수 있는데, 이들 각각은 다음 시점에서 작동하는 후임자 네트워크에게 메시지를 전달합니다. 재귀적 신경망의 루프를 풀면 어떻게 될지 한번 생각해 봅시다:
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/RNN-unrolled.png){:height="200px"}<br>
-    루프를 푼 재귀적 신경망
+![]({{ site.url }}/assets/images/RNN-unrolled.png){:height="200px"} 
+
+루프를 푼 재귀적 신경망
 </div>
 
 이러한 재귀적 신경망의 체인같은 성질은 재귀적 신경망이 시퀀스와 리스트 구조와 같이 순서가 있는 종류의 데이터에 밀접하게 관련되어 있다는 것을 암시합니다. 즉, 시퀀스와 리스트 데이터에 잘 적용할수 있는 신경망의 자연스러운 구조라는 것입니다. 과연 그럴까요?
@@ -43,15 +44,17 @@ RNN의 중요한 매력중 한가지는 이전의 비디오 프레임을 사용�
 때로는 현재의 작업을 처리하기 위해서 단지 최근의 정보만을 살펴봐야 할때도 있습니다. 예를 들어, 이전 단어를 기반으로 다음에 와야 할 단어를 예측하려고 시도하는 언어 모델을 생각해 봅시다. 우리가 "the clouds are in the sky" 라는 문장에서 마지막 단어를 예측하려고 한다면, 우리는 더 이상의 정보를 필요로 하지 않습니다. 다음 단어가 sky가 될 것이란 것은 매우 분명합니다. 그러한 경우, 즉 관련된 정보와 그것을 필요로 하는 장소 사이의 간격이 작은 경우에는, RNN은 과거의 정보를 사용하는 방법을 손쉽게 배울 수 있습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/RNN-shorttermdepdencies.png){:height="200px"}<br>
-    데이터가 단기적 종속성을 가지는 경우
+![]({{ site.url }}/assets/images/RNN-shorttermdepdencies.png){:height="200px"}
+
+데이터가 단기적 종속성을 가지는 경우
 </div>
 
 그러나, 더 많은 맥락을 필요로 하는 경우도 있습니다. "I grew up in France... I speak fluent French." 라는 텍스트에서 마지막 단어를 예측하려고 해봅시다. 마지막 단어의 최근 정보는 다음에 오는 단어가 아마도 언어의 이름이라고 제안할 수 있겠지만, 어떤 언어인지로 좁히기 위해서는, 더 뒤로부터 France가 나오는 문맥을 필요로 합니다. 연관된 정보와 그것이 필요해지는 시점 간의 간격이 매우 커지게 되는 상황은 전적으로 가능합니다. 불행히도 그 격차가 커지면 RNN은 정보를 연결하는 법을 배우기 어렵게 됩니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/RNN-longtermdependencies.png){:height="200px"}<br>
-     데이터가 장기적 종속성을 가지는 경우
+![]({{ site.url }}/assets/images/RNN-longtermdependencies.png){:height="200px"}<br>
+
+ 데이터가 장기적 종속성을 가지는 경우
 </div>
 
 이론적으로는 RNN이 이러한 "장기적 의존성"을 절대적으로 처리할 수는 있습니다. 인간이 이러한 형태의 쉬운 문제를 해결하기 위해서 신중히 매개변수를 선택할 수 있기 때문입니다. 그러나 슬프게도 실질적으로 RNN은 그러한 장기적 의존성 문제를 해결하도록 쉽게 학습할 수 있을 것 같지는 않습니다. 이 문제는 Hochreiter (1991) [독일]와 Bengio (1994)에 의해서 깊이 있게 조사되었는데, 그들은 이러한 장기적 의존성을 학습하는 문제가 해결되기 어려운 몇 가지의 매우 근본적 이유를 발견하였습니다.
@@ -67,22 +70,25 @@ LSTM은 장기 의존성 문제를 피하기 위해 명시적으로 설계되었
 모든 재귀적 신경망은 신경망의 반복적인 모듈 체인의 형태를 가집니다. 표준 RNN에서는, 이러한 재귀적으로 반복하는 모듈은 단일의 $$tanh$$ 계층과 같은 매우 간단한 구조를 가집니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-SimpleRNN.png){:height="200px"}<br>
-    표준 RNN에서의 반복되는 모듈은 싱글 $$tanh$$ 계층을 포함합니다.
+![]({{ site.url }}/assets/images/LSTM3-SimpleRNN.png){:height="200px"}<br>
+
+표준 RNN에서의 반복되는 모듈은 싱글 $$tanh$$ 계층을 포함합니다.
 </div>
 
 LSTM 네트워크들도 이러한 체인구조를 가지지만, 그 반복 모듈들의 구조는 상이합니다. 단일의 뉴럴네트워크 구조를 가지는 대신에, 아주 특별한 방식으로 상호작용하는 4개의 계층을 가집니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-chain.png){:height="200px"}<br>
-     The repeating module in an LSTM contains four interacting layers.
+![]({{ site.url }}/assets/images/LSTM3-chain.png){:height="200px"}<br>
+
+ The repeating module in an LSTM contains four interacting layers.
 </div>
 
 무슨 일이 일어나는지에 대한 세부적 사항은 걱정할 필요가 없습니다. 우리는 나중에 LSTM 다이어그램을 단계적으로 살펴보도록 할 것이니까요. 지금은 사용하는 표기법에 익숙해 지도록 노력해 봅시다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM2-notation.png){:height="100px"}<br>
-    LSTM 네트워크 다이어그램의 표기법
+![]({{ site.url }}/assets/images/LSTM2-notation.png){:height="100px"}<br>
+
+LSTM 네트워크 다이어그램의 표기법
 </div>
 
 위의 다이어그램에서 각 선은 한 노드의 출력에서 다른 노드의 입력까지 전체 벡터를 전달합니다. 핑크색 원은 벡터 추가와 같은 `pointwise` 연산을 나타내며, 노란색 상자는 뉴럴네트워크 계층을 학습한 것입니다. 병합되는 선은 연결을 나타내는 반면 분기는 내용이 복사되고 다른 선으로 이동한다는 것을 나타냅니다.
@@ -94,8 +100,9 @@ LSTM의 핵심은 셀 상태이며 그것은 다이어그램의 상단을 가로
 셀 상태는 일종의 컨베이어 벨트와 같습니다. 그것은 사소한 선형적 상호작용만을 하면서 체인 전체를 똑바로 따라갑니다. 정보가 변경되지 않고 그대로 전달되는 것은 매우 쉽습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-C-line.png){:height="200px"}<br>
-     셀 상태
+![]({{ site.url }}/assets/images/LSTM3-C-line.png){:height="200px"}<br>
+
+ 셀 상태
 </div>
 
 LSTM 네트워크에는 셀에서 정보를 제거하거나 추가할 수 있는 기능이 있는데, 이것은 게이트에 의해서 조심스럽게 조절됩니다.
@@ -103,8 +110,9 @@ LSTM 네트워크에는 셀에서 정보를 제거하거나 추가할 수 있는
 게이트를 이용하여 선택적으로 셀에 정보를 전달할 수 있습니다. 그것들은 시그모이드 신경망 계층과 `pointwise` 곱셈 연산으로 구성되어 있습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-gate.png){:height="100px"}<br>
-    시그모이드 신경망 계층과 `pointwise` 곱셈연산으로 구성된 게이트
+![]({{ site.url }}/assets/images/LSTM3-gate.png){:height="100px"}<br>
+
+시그모이드 신경망 계층과 `pointwise` 곱셈연산으로 구성된 게이트
 </div>
 
 시그모이드 계층은 0과 1사이의 숫자를 출력함으로써 각 구성요소의 얼마 만큼을 통과시켜야 할지를 기술합니다. 0 값은 "아무 것도 통과시키지 말 것"을 의미하고 1 값은 "모든 것을 통과시킬 것"을 의미합니다.
@@ -118,8 +126,9 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 이전에 출현한 모든 단어들을 바탕으로 다음 단어를 예측하려고 시도하는 언어 모델의 예제로 돌아가 보겠습니다. 그러한 문제에서, 셀 상태에는 현재 대상의 성별이 포함될 수 있으므로 올바른 대명사를 사용할 수 있습니다. 새로운 주어가 보일 때, 우리는 이전 주어의 성을 잊기를 원할 것입니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-focus-f.png){:height="200px"}<br>
-    망각 게이트 레이어
+![]({{ site.url }}/assets/images/LSTM3-focus-f.png){:height="200px"}<br>
+
+망각 게이트 레이어
 </div>
 
 다음 단계는 우리가 셀의 상태로 저장할 새로운 정보가 무엇인지 결정하는 것입니다. 여기에는 두 부분이 있습니다. 먼저 "입력 게이트 계층"이라고 하는 시그모이드 계층이 갱신할 값을 결정합니다. 그 다음, $$tanh$$ 계층은 상태에 추가될 수 있는 새로운 후보 값 $$\widetilde{C}_t$$ 벡터를 생성합니다. 다음 단계에서는 이 두 요소를 결합하여 상태를 업데이트합니다.
@@ -127,8 +136,9 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 우리 언어 모델의 예제에서, 우리는 잊고자 하는 오래된 것(성별)을 대체하기 위해서 새로운 주어의 성별을 셀 상태에 추가하고자 합니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-focus-i.png){:height="200px"}<br>
-    업데이트할 새로운 정보가 무엇인지 결정하기
+![]({{ site.url }}/assets/images/LSTM3-focus-i.png){:height="200px"}<br>
+
+업데이트할 새로운 정보가 무엇인지 결정하기
 </div>
 
 이제는 이전 셀 상태 $$C_{t-1}$$을 새로운 셀 상태 $$C_t$$로 갱신해야 합니다. 이전 단계에서는 수행해야할 작업을 결정하였기 때문에 우리는 단지 실제로 그것을 수행하기만 합니다.
@@ -138,8 +148,9 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 언어 모델의 경우 이전 단계에서 결정한대로 이전 주어의 성별에 대한 정보를 삭제하고 새로운 정보를 추가합니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-focus-C.png){:height="200px"}<br>
-    셀의 상태를 새로운 정보로 갱신하기
+![]({{ site.url }}/assets/images/LSTM3-focus-C.png){:height="200px"}<br>
+
+셀의 상태를 새로운 정보로 갱신하기
 </div>
 
 마지막으로 출력할 내용을 결정할 필요가 있습니다. 이 출력은 셀의 상태에 기반을 두지만 필터링된 버전이 됩니다. 먼저, 출력할 셀 상태의 일부분을 결정하는 시그모이드 레이어를 실행합니다. 그 다음에는 $$tanh$$를 통해 셀 상태를 설정하고 (값을 $$-1$$과 $$1$$ 사이로 밀어 넣으십시오) 시그널 게이트의 출력을 곱해서 우리가 결정한 부분만을 출력하게 합니다.
@@ -147,8 +158,9 @@ LSTM 네트워크의 첫번째 단계는 셀 상태로부터 벗어버릴 정보
 언어 모델 예제의 경우에는 단지 주어를 보았으므로 다음에 올 동사와 관련된 정보를 출력 할 수 있습니다. 예를 들어 주어가 단수인지 복수인지를 출력할 수 있으므로 다음에 오는 동사가 어떤 형태로 결합되어야 하는지 알 수 있습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-focus-o.png){:height="200px"}<br>
-    출력한 내용을 결정하기
+![]({{ site.url }}/assets/images/LSTM3-focus-o.png){:height="200px"}<br>
+
+출력한 내용을 결정하기
 </div>
 
 ### LSTM의 변종(Variants on Long Short Term Memory)
@@ -160,8 +172,9 @@ Gers과 Schmidhuber (2000)에 의해서 소개된 인기있는 LSTM 네트워크
 > 주) Peephole은 엿보기라는 의미입니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-var-peepholes.png){:height="200px"}<br>
-    `Peephole connections`가 추가 된 LSTM의 변종
+![]({{ site.url }}/assets/images/LSTM3-var-peepholes.png){:height="200px"}<br>
+
+`Peephole connections`가 추가 된 LSTM의 변종
 </div>
 
 위의 다이어그램은 모든 게이트에 `peephole`을 추가하고 있습니다만, 많은 논문들이 `peephole`을 일부 게이트에만 추가하거나 또는 다른 논문들에서는 `peephole`을 추가하고 있지 않습니다.
@@ -169,15 +182,17 @@ Gers과 Schmidhuber (2000)에 의해서 소개된 인기있는 LSTM 네트워크
 또 다른 변형은 망각(forget) 및 입력이 결합된 게이트를 사용하는 것입니다. 여기서는 망각할 정보와 새로운 정보를 추가해야하는 정보를 별개로써 결정하는 대신, 우리는 이러한 결정을 함께합니다. 그 자리에 무언가를 입력 할 때에만 잊어 버립니다. 우리는 더 오래된 것을 망각할 때에만 새로운 값을 그 상태에 입력합니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-var-tied.png){:height="200px"}<br>
-    망각과 입력이 결합된 게이트
+![]({{ site.url }}/assets/images/LSTM3-var-tied.png){:height="200px"}<br>
+
+망각과 입력이 결합된 게이트
 </div>
 
 LSTM 네트워크에 조금 더 극적인 변종은 Gated Recurrent Unit(GRU)입니다. 이것은 (Cho et al., 2014)에 의해서 도입되었습니다. 이것은 망각 게이트와 입력 게이트를 하나의 "업데이트 게이트"에 결합합니다. 또한 셀 상태와 숨겨진 상태를 병합하고 다른 변경 작업도 수행합니다. 결과로 생성 된 모델은 표준 LSTM 네트워크 모델보다 간단하며 점차 대중화되고 있습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/LSTM3-var-GRU.png){:height="200px"}<br>
-    Gated Recurrent Unit(GRU)
+![]({{ site.url }}/assets/images/LSTM3-var-GRU.png){:height="200px"}<br>
+
+Gated Recurrent Unit(GRU)
 </div>
 
 이들은 가장 주목할 만한 LSTM 네트워크의 변종 중 단지 몇 가지에 지나지 않습니다. (Yao et al., 2015)에 의한 Depth Gated RNNs 과 같은 많은 것들이 있습니다. (Koutnik et al., 2014)에 의한 Clockwork RNNs와 같은 장기 의존성에 대한 완전히 다른 접근법도 있습니다.
