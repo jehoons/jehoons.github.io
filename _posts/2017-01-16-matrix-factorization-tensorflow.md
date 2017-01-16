@@ -14,6 +14,6 @@ published: true
 대체적으로 추천시스템은 크게 두 가지 전략 중 한가지에 기반을 둡니다. 컨텐츠 필터링 접근법에서는 각 사용자 또는 제품의 특징을 추출해 내기 위한 프로파일을 작성합니다. 예를 들어, 영화 프로필에는 장르, 참여 배우, 흥행 인기도 등의 속성이 포함될 수 있습니다. 사용자 프로필에는 인구통계학적 정보 또는 적절한 설문지에 제공된 답변이 포함될 수 있습니다. 이러한 프로파일 정보는 이들과 관련이 있는 제품에 대한 힌트를 제공해 주기 때문에, 이를 이용하여 사용자와 일치하는 제품과 서로 연결할 수 있습니다. 물론, 이러한 콘텐츠기반의 전략을 적용하려면 개인선호도 등을 포함한 수집하기 용이하지 않은 외부정보를 수집할 필요가 있습니다.
 
 > Tensorflow의 출시와 함께, 여러 개발자들이 이를 이용한 알고리즘을 개발하려고 노력중입니다. 여기서는 tensorflow를 이용한 행렬의 분해에 관한 하나의 시도를 소개합니다. 원문은 [여기](...)에서 확인할 수 있습니다.
-> [recommender systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf)에 관한 문서.
+> [recommender systems]({{ site.url }}/assets/papers/Koren et al. - 2009 - Matrix factorization techniques for recommender sy.pdf)에 관한 문서.
 
 > 작업중입니다.
