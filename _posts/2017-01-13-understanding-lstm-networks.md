@@ -16,9 +16,9 @@ LSTM (Long Short-Term Memory)네트워크에 관한 이 문서의 원문은 [여
 재귀적 신경망은 이런 문제를 처리할 수 있습니다. 재귀적 신경망은 내부에 피드백 회로를 가지고 있는데, 이러한 구조적 특징 덕분에 정보가 지속적으로 처리되도록 할 수 있습니다.
 
 <div style="text-align:center" markdown="1">
-    ![]({{ site.url }}/assets/images/RNN-rolled.png){:height="200px"}
-    
-    피드백 회로를 가지고 있는 재귀적 신경망
+![]({{ site.url }}/assets/images/RNN-rolled.png){:height="200px"}
+
+피드백 회로를 가지고 있는 재귀적 신경망
 </div>
 
 위 다이어그램에서, 신경망 묶음 $$A$$는 입력 $$X_t$$를 받아들이고 $$h_t$$를 출력으로 내보냅니다. 피드백 회로는 정보가 네트워크의 하나의 단계로부터 네트워크의 다음 단계로 통과하도록 허용합니다.
