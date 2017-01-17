@@ -9,6 +9,12 @@ published: true
 
 ### Matrix factorization for recommender systems
 
+<div style="text-align:center" markdown="1">
+![]({{ site.url }}/assets/images/matrixfactorizationtensorflow-recommendersystem-1.png){:height="200px"}
+
+Concept of simple recommender system
+</div>
+
 현대의 소비자는 다양한 선택권을 가지고 있습니다. 인터넷 소매업체 및 컨텐츠 제공업체는 엄청난 양의 제품을 제공하면서 다양한 특수한 요구사항 및 취향을 충족시킬수 있는 전례없이 다양한 기회를 제공합니다. 소비자를 그들이 잠재적으로 가장 적합할 수 있는 제품과 조화시키는 것은 사용자 만족도와 충성도를 높이는데 중요한 요소입니다. 결과적으로 더 많은 소매업체가 제품의 사용자 관심패턴을 분석하여 맞춤추천을 제공하는 추천 시스템에 관심을 가지고 있습니다. 훌륭한 개인화된 추천 제품들은 사용자경험에 또다른 차원을 추가할 수 있기 때문에, 아마존 및 넷플릭스와 같은 전자상거래의 선구자는 추천시스템을 웹사이트의 중요한 부분으로 만들었습니다.
 
 #### Recommender system strategies
