@@ -12,6 +12,8 @@ published: true
 <div style="text-align:center" markdown="1">
 ![]({{ site.url }}/assets/images/matrixfactorizationtensorflow-recommendersystem-1.png){:height="200px"}
 
+
+
 Concept of simple recommender system
 </div>
 
