@@ -29,6 +29,11 @@ Concept of simple recommender system
 
 협력적필터링 접근의 주요한 두 영역은 이웃기반방법(neighborhood methods)과 잠재인자모델(latent factor model)입니다. 이웃기반방법은 아이템간 또는 사용자간의 관계를 계산하는데 중점을 둡니다. 아이템지향적 접근법은 항목에 대한 사용자 선호도를 평가하기 위해서 동일한 유저가 부여한 "인접한"항목에 매긴 점수를 참고합니다. 이웃 제품이란 동일한 사용자가 등급을 매길 때 유사한 등급을 부여하는 경향이 있는 다른 제품입니다. 예를 들어, 영화 *라이언일병구하기*를 생각해 보십시오. 이 영화의 이웃으로는 전쟁 영화, 스필버그 영화, 톰행크스 영화 등이 포함될수 있습니다. 영화 *라이언일병구하기*에 대한 다른 특정사용자의 평가등급을 예측하려면 이 사용자가 실제로 평가한 가장 가까운 이웃이 무엇인지 찾을 필요가 있습니다. 그림 1에서 볼수 있듯이 사용자중심의 접근방식은 서로의 등급을 보완할 수 있는 마음이 맞는 사용자를 찾아냅니다.
 
+잠재요인 모델은 등급패턴에서 추론된 20-100가지의 요소에 대해 항목과 사용자를 모두 특성화하여 등급을 설명하려고 하는 대안적인 방법입니다. 어떤 면에서, 이러한 요소는 앞서 언급한 인간이 만든 노래유전자에 대한 전산화된 대안을 포함합니다. 영화의 경우, 발견된 요인은 코미디 대 드라마, 액션의 분량 또는 어린이 오리엔테이션과 같은 분명한 차원, 인물 개발 또는 기이함과 같은 잘 정의되지 않은 차원, 또는 완전히 해석되지 않는 차원을 측정할수 있습니다. 사용자의 경우에는, 각 요소는 해당 영화 요소에서 점수가 높은 영화를 얼마나 좋아하는지 측정합니다.
+
+Figure 2 illustrates this idea for a simplified example in two dimensions. Consider two hypothetical dimensions characterized as female- versus male-oriented and serious versus escapist. The figure shows where several well-known movies and a few fictitious users might fall on these two dimensions. For this model, a user’s predicted rating for a movie, relative to the movie’s average rating, would equal the dot product of the movie’s and user’s locations on the graph. For example, we would expect Gusto love Dumb and Dumber, to hate The Color Purple, and to rate Braveheart about average. Note that some movies—for example, Ocean’s 11—and users—for example, Dave—would be characterized as fairly neutral on these two dimensions. 
+
+
 > Tensorflow의 출시와 함께, 여러 개발자들이 이를 이용한 알고리즘을 개발하려고 노력중입니다. 여기서는 tensorflow를 이용한 행렬의 분해에 관한 하나의 시도를 소개합니다. 원문은 [여기](...)에서 확인할 수 있습니다.
 > [recommender systems]({{ site.url }}/assets/papers/Koren et al. - 2009 - Matrix factorization techniques for recommender sy.pdf) 
 
