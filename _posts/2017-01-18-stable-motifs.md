@@ -19,5 +19,7 @@ Stable Motif는 구성노드의 집합과 그들의 상태로 정의됩니다. �
 Figure 1. Stable Motifs
 </div>
 
+Stable Motif는 네트워크의 Stable states들, 즉 어트랙터 형성의 구조적 원천이라고도 이해할 수 있겠습니다. 이들 Stable Motif들은 Normal node들을 통해서 서로 연결되어 있습니다. 그래서 normal node의 변화에 대해서 stable motif들이 불변이기는 하지만, stable motif들은 
+
 [참고문헌](https://www.dropbox.com/s/xud8eudz01sms80/Za%C3%B1udo%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Albert%20-%202015%20-%20Cell%20Fate%20Reprogramming%20by%20Control%20of%20Intracellula.PDF?dl=0)
 
