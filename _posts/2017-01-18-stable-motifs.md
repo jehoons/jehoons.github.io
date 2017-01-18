@@ -2,7 +2,7 @@
 title: 'Stable Motifs of Boolean Network'
 date: '2017-01-18 10:00'
 layout: post
-published: True 
+published: True
 ---
 
 새로운 치료제의 개발이나 줄기세포를 리프로그래밍하는 실용적 응용분야들이 추구하는 궁극적 목표는 생체 네트워크의 제어방법을 찾아내는 것입니다. (Zañudo and Albert, 2015)가 제안한 Stable Motif기반의 네트워크 제어표적 예측알고리즘은 구조 및 기능적 정보를 통합하여 이진네트워크가 원하는 어트랙터 상태에 위치하도록 제어하는 제어표적 예측 프레임워크입니다.
@@ -19,7 +19,20 @@ Stable Motif는 구성노드의 집합과 그들의 상태로 정의됩니다. �
 Figure 1. Stable Motifs
 </div>
 
-Stable Motif는 네트워크의 Stable states들, 즉 어트랙터 형성의 구조적 원천이라고도 이해할 수 있겠습니다. 이들 Stable Motif들은 Normal node들을 통해서 서로 연결되어 있습니다. 그래서 normal node의 변화에 대해서 stable motif들이 불변이기는 하지만, stable motif들은 
+Stable Motif는 네트워크의 Stable states들, 즉 어트랙터 형성의 구조적 원천이라고도 이해할 수 있겠습니다. 이들 Stable Motif들은 Normal node들을 통해서 서로 연결되어 있습니다.
+
+### Stable motif control implies network control
+
+<div style="text-align:center" markdown="1">
+![]({{ site.url }}/assets/images/StableMotifs-2.png){:height="300px"}
+
+Figure 2. Stable motif succession diagram for the example in Figure 1.
+</div>
+
+그림2의 stable motif 계승다이어그램은 어트랙터 검색과정에서 순차적으로 얻어지는 stable motif들을 보였습니다. 순차적으로 stable motif들이 출현하다가 결국에는 어트렉터로 수렴하게 됩니다. 이러한 stable motif들의 발생순서는 시스템수준에서 일어나는 일입니다. 이 연구에서는 이러한 stable motif들이 발생하는 순서에 관한 정보를 활용함으로써 우리가 원하는 어트렉터로 시스템을 가이드할 수 있다고 제안합니다. 이 연구에서는 이러한 제어방식을 *stable motif control*이라고 명명하였습니다.
+
+*stable motif control*의 근간이 되는 생각은 *stable motif succession diagram*에서 모티프의 출현순서가 어트렉터를 유일하게 결정하기 때문에, 각각의 stable motif들을 제어하는 것은 시스템이 그 어트렉터를 향해 가도록 재촉할 것이라는 겁니다. 그러므로 원하는 어트렉터로 시스템의 상태를 제어하기 위해서는 *stable motif succession diagram*에서 그 어트렉터를 찾고, 관련된 stable motif들을 제어하면 된다는 것입니다.
+
+한 *stable motif*가 원하는 상태를 가지도록 하기 위해서는 다른 *stable motif*들을 제외후, *stable motif*가 원하는 상태로 고정되는 노드의 부분집합을 찾으면 됩니다.
 
 [참고문헌](https://www.dropbox.com/s/xud8eudz01sms80/Za%C3%B1udo%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Albert%20-%202015%20-%20Cell%20Fate%20Reprogramming%20by%20Control%20of%20Intracellula.PDF?dl=0)
-
