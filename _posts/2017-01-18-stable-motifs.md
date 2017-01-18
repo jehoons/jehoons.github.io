@@ -21,7 +21,7 @@ Figure 1. Stable Motifs
 
 안정모티프는 네트워크의 안정한 상태들, 즉 어트랙터 형성의 구조적 원천이라고도 이해할 수 있겠습니다. 이들 안정모티프는 다른 일반 노드들을 통해서 서로 연결되어 있습니다.
 
-### Stable motif control implies network control
+### Network control based on stable motif control
 
 <div style="text-align:center" markdown="1">
 ![]({{ site.url }}/assets/images/StableMotifs-2.png){:height="300px"}
@@ -35,4 +35,6 @@ Figure 2. Stable motif succession diagram for the example in Figure 1.
 
 한 안정모티프가 원하는 상태를 가지도록 하기 위해서는 다른 안정모티프들을 제외후, 안정모티프가 원하는 상태로 고정되는 노드의 부분집합을 찾으면 됩니다.
 
-[참고문헌](https://www.dropbox.com/s/xud8eudz01sms80/Za%C3%B1udo%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Albert%20-%202015%20-%20Cell%20Fate%20Reprogramming%20by%20Control%20of%20Intracellula.PDF?dl=0)
+### References
+
+[Zañudo, J.G.T., and Albert, R. (2015). Cell Fate Reprogramming by Control of Intracellular Network Dynamics. PLOS Computational Biology 11, e1004193.](https://www.dropbox.com/s/xud8eudz01sms80/Za%C3%B1udo%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20Albert%20-%202015%20-%20Cell%20Fate%20Reprogramming%20by%20Control%20of%20Intracellula.PDF?dl=0)
