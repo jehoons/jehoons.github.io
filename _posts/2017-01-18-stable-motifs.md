@@ -1,6 +1,6 @@
 ---
 title: 'Stable Motifs of Boolean Network'
-date: '2017-1-2 10:00'
+date: '2017-01-18 10:00'
 layout: post
 published: True 
 ---
