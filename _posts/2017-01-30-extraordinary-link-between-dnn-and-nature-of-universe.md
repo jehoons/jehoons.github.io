@@ -9,8 +9,6 @@ published: true
 
 > 이 문서의 원문은 [여기](https://www.technologyreview.com/s/602344/the-extraordinary-link-between-deep-neural-networks-and-the-nature-of-the-universe)를 확인하세요.
 
-하지만 문제가 있습니다. 여기에는 그 어떤 수학적인 이유도 없습니다. 
-
 그러나 문제가 있습니다. 레이어로 배열 된 네트워크가 이러한 문제를 잘 처리해야 하는지에 대한 그 어떤 수학적 이유도 없습니다. 수학자는 단지 어리동절할 뿐입니다. 딥뉴럴네트워크의 커다란 성공에도 불구하고 아무도 이것이 어떻게 그것을 달성하였는지에 대해서는 확신할 수 없었습니다. 
 
 하버드 대학의 Henry Lin과 MIT대학의 Max Tegmark의 연구 덕분에 이러한 상황은 바뀌었습니다. 이들은 그 답이 우주의 본성에 달려 있기대문에 수학자들을 당혹스럽게 했다고 말합니다. 즉, 그 답은 수학이 아니라 물리학의 영역에 있다는 말입니다. 
