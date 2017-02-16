@@ -4,6 +4,9 @@ date: '2017-2-16 10:00'
 layout: post
 published: true
 ---
+텐서플로우를 배워봅시다. 내용은 주로 [여기](https://www.tensorflow.org/get_started)를 참고하여 작성된 것입니다.
+
+### Linear regression learning using Gradient Descent 
 경사하강법(Gradient Descent)을 이용해서 linear regression모델의 파라미터 $$W$$와 $$b$$를 추정해 봅시다.
 
 ```python 
@@ -46,11 +49,23 @@ init = tf.initialize_all_variables()
 # session은 우선 초기화를 거쳐야 하고, 이후 반복적으로 실행되면서 epsilon을 
 # 최소화 시킵니다. 
 sess.run(init)
-for step in range(0, 1000):
+for step in range(0, 100):
     sess.run(train)
-    if step % 100 == 0:
+    if step % 10 == 0:
         print (step, 'fitness:', sess.run(epsilon))
 
+```
+
+계산이 다 되었다면, 다음 명령을 실행해서 결과를 확인해 봅시다.
+
+```python
+In [84]: sess.run(W_hat)
+Out[84]: array([[ 0.10001178,  0.19960685]], dtype=float32)
+
+In [85]: sess.run(b_hat)
+Out[85]: array([ 0.30024472], dtype=float32)
+
+In [86]:
 ```
 
 결과물은 다음과 같이 그래프로 표현할수 있습니다. 실험결과와 예측치가 얼마나 잘 잘 부합하는지를 확인해 볼 수 있을 것입니다. 
@@ -58,4 +73,13 @@ for step in range(0, 1000):
 import matplotlib.pyplot as plt
 plt.plot(sess.run(y_hat).transpose(), y_data.transpose(), 'o')
 ```
+
+### MNIST For ML beginners
+
+참고할 내용들: 
+
+http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+
+https://www.tensorflow.org/get_started/mnist/beginners
+
 
