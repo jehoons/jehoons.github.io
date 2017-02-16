@@ -52,3 +52,10 @@ for step in range(0, 1000):
         print (step, 'fitness:', sess.run(epsilon))
 
 ```
+
+결과물은 다음과 같이 그래프로 표현할수 있습니다. 실험결과와 예측치가 얼마나 잘 잘 부합하는지를 확인해 볼 수 있을 것입니다. 
+```python
+import matplotlib.pyplot as plt
+plt.plot(sess.run(y_hat).transpose(), y_data.transpose(), 'o')
+```
+
