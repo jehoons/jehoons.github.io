@@ -2,7 +2,7 @@
 title: 'Tensorflow learning'
 date: '2017-2-16 10:00'
 layout: post
-published: false
+published: true
 ---
 경사하강법(Gradient Descent)을 이용해서 linear regression모델의 파라미터 $$W$$와 $$b$$를 추정해 봅시다.
 
