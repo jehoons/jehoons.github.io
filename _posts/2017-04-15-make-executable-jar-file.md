@@ -63,7 +63,7 @@ exec "$java" $java_args -jar $MYSELF "$@"
 exit 1 
 ```
 
-exec_header.sh에 jar파일을 다음 명령을 이용하여 동봉합니다. 
+`cat`명령을 이용하여 `exec_header.sh`에 `jar`파일을 동봉할 수 있습니다.
 
 ```bash 
 cat exec_header.sh HelloWorld.jar > HelloWorld && chmod +x HelloWorld
@@ -77,9 +77,6 @@ $ ./HelloWorld
 
 
 ### References
-
 https://coderwall.com/p/ssuaxa
 
 http://www.linuxjournal.com/content/add-binary-payload-your-shell-scripts
-
-
