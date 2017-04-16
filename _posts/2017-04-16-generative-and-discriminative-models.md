@@ -39,7 +39,7 @@ $p(y \mid x)$  는 샘플 ​$x$ 가 주어졌을때, ​$y$ 가 될 확률값�
 
 ### References
 
-http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm
+[aa](http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm)
 
 https://stats.stackexchange.com/questions/12421/generative-vs-discriminative/223850#223850
 
