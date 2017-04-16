@@ -5,7 +5,7 @@ layout: post
 published: true
 ---
 
-패턴 인식분야에서, 분류에 쓰이는 모델은 크기 두가지로 분류되는데, 이들은 Generative Model(생성 모델)과 Discriminative Model(판별 모델)입니다. 이 둘은 어떤 차이가 있을까요? 
+패턴 인식분야에서 분류에 쓰이는 모델은 크게 두가지로 분류될 수 있는데, 이들은 각각 Generative Model(생성 모델)과 Discriminative Model(판별 모델)입니다. 이 둘은 어떤 차이가 있을까요? 
 
 > Generative models model the distribution of individual classes. Discriminative models learn the (hard or soft) boundary between classes
 
@@ -33,7 +33,7 @@ x=2 | 1/2   1/2
 
 $p(y \mid x)$  는 샘플 ​$x$ 가 주어졌을때, ​$y$ 가 될 확률값을 줍니다. 그러므로 샘플 ​$x$ 를 ​$y$ 로 분류하기 위한 자연스러운 확률분포이며, 왜 discriminative model이라고 부르는지 알 수 있습니다. 
 
-생성모델 $p(x,y)​$ 는 Bayes Rule을 적용하여 $p(y \mid x)​$  로 변환할 수 있고, 그러므로 분류 목적으로 이용할 수도 있을 것입니다. 하지만, 생성모델의 흥미로운 응용은 $p(x,y)​$ 를 이용하여 학습데이터셋과 유사한 통계적인 특성을 가지는 $(x,y)​$ 쌍을 생성하는 것입니다.
+생성모델 $p(x,y)$ 는 Bayes Rule을 적용하여 $p(y \mid x)$  로 변환할 수 있고, 그러므로 분류 목적으로 이용할 수도 있을 것입니다. 하지만, 생성모델의 흥미로운 응용은 $p(x,y)$ 를 이용하여 학습데이터셋과 유사한 통계적인 특성을 가지는 $(x,y)$ 쌍을 생성하는 것입니다.
 
 어쩌면 생성모델이 판별모델에 비해서 일반적으로 더 우수하다고 생각될수도 있겠습니다. 하지만, 실질적인 상황은 단순하지 않습니다. 연구에 의하면, 일반적으로 판별 모델들이 분류작업에 대해서 생성모델보다 우수하다는 것이 알려져 있습니다.
 
