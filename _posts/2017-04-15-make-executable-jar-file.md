@@ -77,7 +77,6 @@ $ ./HelloWorld
 
 
 ### References
-* https://coderwall.com/p/ssuaxa
-* http://www.linuxjournal.com/content/add-binary-payload-your-shell-scripts
-
+* [https://coderwall.com](https://coderwall.com/p/ssuaxa)
+* [http://www.linuxjournal.com](http://www.linuxjournal.com/content/add-binary-payload-your-shell-scripts)
 
