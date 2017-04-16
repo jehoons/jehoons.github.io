@@ -31,7 +31,7 @@ x=1 | 1     0
 x=2 | 1/2   1/2
 ```
 
-$p(y \mid x)$  는 샘플 ​$x$ 가 주어졌을때, ​$y$ 가 될 확률값을 줍니다. 그러므로 샘플 ​$x$ 를 ​$y$ 로 분류하기 위한 자연스러운 확률분포이며, 왜 discriminative model이라고 부르는지 알 수 있습니다. 
+$p(y \mid x)$  는 샘플 $x$ 가 주어졌을때, $y$ 가 될 확률값을 줍니다. 그러므로 샘플 $x$를 $y$ 로 분류하기 위한 자연스러운 확률분포이며, 왜 discriminative model이라고 부르는지 알 수 있습니다. 
 
 생성모델 $p(x,y)$ 는 Bayes Rule을 적용하여 $p(y \mid x)$  로 변환할 수 있고, 그러므로 분류 목적으로 이용할 수도 있을 것입니다. 하지만, 생성모델의 흥미로운 응용은 $p(x,y)$ 를 이용하여 학습데이터셋과 유사한 통계적인 특성을 가지는 $(x,y)$ 쌍을 생성하는 것입니다.
 
@@ -39,19 +39,10 @@ $p(y \mid x)$  는 샘플 ​$x$ 가 주어졌을때, ​$y$ 가 될 확률값�
 
 ### References
 
-[aa](http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm)
+[discussion from stackoverflow](http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm)
 
-https://stats.stackexchange.com/questions/12421/generative-vs-discriminative/223850#223850
+[discussion from stackexchange](https://stats.stackexchange.com/questions/12421/generative-vs-discriminative/223850#223850)
 
-Adrew Ng's paper
+[Adrew Ng's paper](http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf)
 
-http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf
-
-Adrew Ng's note 
-
-http://cs229.stanford.edu/notes/cs229-notes2.pdf
-
-
-
-
-
+[Adrew Ng's note](http://cs229.stanford.edu/notes/cs229-notes2.pdf)
