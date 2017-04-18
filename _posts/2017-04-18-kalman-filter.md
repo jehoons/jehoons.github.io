@@ -33,6 +33,6 @@ $$x_k^+=x_k^- + K_{gk}(y_k-Hxk^-)=(I-K_{gk}H)x_k^- + K_{gk}y_k$$
 
 
 
-### References
+(계속)
 
 
