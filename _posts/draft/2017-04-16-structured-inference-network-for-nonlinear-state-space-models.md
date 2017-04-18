@@ -27,5 +27,3 @@ http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-gener
 
 https://stats.stackexchange.com/questions/12421/generative-vs-discriminative/223850#223850
 
-
-
