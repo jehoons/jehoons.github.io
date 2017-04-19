@@ -13,6 +13,12 @@ published: true
 Figure 1. ML vs EM
 </div>
 
+<div style="text-align:center" markdown="1">
+![](../assets/images/EM-algorithm-1.png){:height="500px"}
+
+Figure 1. ML vs EM
+</div>
+
 ### References
 
 [What is the expectation maximization algorithm?](https://www.nature.com/nbt/journal/v26/n8/pdf/nbt1406.pdf)
