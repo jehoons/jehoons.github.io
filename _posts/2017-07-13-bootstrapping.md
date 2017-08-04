@@ -34,4 +34,6 @@ Out[53]: 0.0014510638198848356
 
 “bootstrapping”을 이용하면 주어진 데이터가 충분하지 않아도 model ensemble을 만들 수 있다. 똑같은 알고리즘을 통해 m번 학습시킨다고 하자. 이 때 매번 training data를 random sampling하면, 서로 다른 m개의 모델이 만들어 진다. 각각의 모델은 학습 과정에서 사용된 데이터에 over-fitting 되어 있겠지만, m개 전체를 사용하여 결정을 내리면 over-fitting 걱정이 크게 줄어들 것이다.
 
-> 이 포스트의 내용은 [여기](https://learningcarrot.wordpress.com/2015/11/12/%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-bootstrapping)에서 발췌한 것입니다. 
+부트스트레핑은 또한, 분류문제에서 분류오류가 나는 데이터셋이 선택될 확률을 증가시킴으로써 모델의 학습정확도를 높이는데에도 활용될 수 있다.
+
+> 이 포스트의 내용은 [여기](https://learningcarrot.wordpress.com/2015/11/12/%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-bootstrapping)에서 발췌한 것입니다.
