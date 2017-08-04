@@ -24,7 +24,15 @@ Out[53]: 0.0014510638198848356
 
 데이터의 양이 충분하지 않을 때에는 이를 이용하여 추정한 결과의 신뢰구간(confidence interval)를 계산할 필요가 있다. 보통, 수집한 데이터의 확률변수의 분포를 정확히 모르기 때문에 측정된 통계치의 신뢰도를 가늠할 방법이 없다. 이 때 bootstrapping을 사용한다. 측정된 n개의 데이터 중에서 중복을 허용하여 m개를 뽑고, 그들의 평균을 구하기를 여러 번 반복한다. 그럼 평균의 분포를 구할 수 있게 되고, 이로부터 95% 확률로 sample mean이 (a, b) 사이의 구간에 위치한다는 것을 보일 수 있을 것이다.
 
-*bootstrapping*은 통계학분야나 머신러닝분야에서 널리 사용되는 용어이다.
+### ML에서의 부트스트랩 (Bootstrap in machine learning)
+
+이 “bootstrapping”은 ML에서도 사용되며, 이는 랜덤 샘플링을 통해 training data를 늘리는 방법이다.
+
+“bootstrapping”이 사용되는 경우로 데이터 셋(training set) 내의 데이터 분포가 고르지 않은 경우를 말할 수 있다. 사과와 오렌지를 구분하는 classifier를 트레이닝한다고 하자. 만약 training set에 사과 이미지 1만장과 오렌지 이미지 100장이 포함되어 있다면, 항상 사과만 찍는 멍청한 classifier도 99%의 트레이닝 정확도를 보일 것이다. 이렇게 균형이 맞지 않은 상황에서는 데이터가 적은 클래스의 error는 무시되는 방향으로 트레이닝되기 쉽다. 이를 해결하기 위한 방법에는 세 가지가 있는데, 첫 번째는 weight를 줄 수 있는 알고리즘을 사용하는 것이고, 두 번째는 “bootstrapping”을 이용해서 오렌지의 데이터 수를 늘리는 것이며, 마지막은 사과 데이터의 수를 역으로 줄이는 것이다.
+
+“bootstrapping”은 over-fitting을 줄이는 데에도 도움이 되며, 이를 “bagging”이라고 한다. Over-fitting을 줄이기 위해서는 데이터가 많은 게 제일 좋지만 그게 마땅치 않을 때가 많다. 그렇다고 model의 complexity를 줄이는 건 그건 역으로 정확도에 악영향을 줄 수 있다. 만약 계산 시간이 크게 문제가 되지 않는 경우라면, 여러 개의 모델을 써서 model ensemble(여러 모델을 통해 결과를 뽑고, 그 값들을 평균하거나 voting하여 최종 값을 산출하는 방법)을 통해 모델의 안정성을 크게 높일 수 있다. 각각의 모델이 over-fitting 되어있더라도, 그들을 평균내면 서로서로 상쇄되어 더 general한 모델이 되기 때문이다.
+
+“bootstrapping”을 이용하면 주어진 데이터가 충분하지 않아도 model ensemble을 만들 수 있다. 똑같은 알고리즘을 통해 m 번 학습시킨다고 하자. 이 때 매번 training data를 random sampling하면, 서로 다른 m개의 모델이 만들어진다. 각각의 모델은 학습 과정에서 사용된 데이터에 over-fitting 되어 있겠지만, m개 전체를 사용하여 결정을 내리면 over-fitting 걱정이 크게 줄어들 것이다. 이에 대한 추가적인 내용은 Wikipedia:Bootstrap_aggregating을 참조할 것.
 
 Bootstrapping에 대해서는 다음 레퍼런스에서 휼륭히 설명하였습니다.
 
