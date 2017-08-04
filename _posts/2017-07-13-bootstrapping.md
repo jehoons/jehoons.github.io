@@ -24,7 +24,7 @@ Out[53]: 0.0014510638198848356
 
 데이터의 양이 충분하지 않을 때에는 이를 이용하여 추정한 결과의 신뢰구간(confidence interval)를 계산할 필요가 있다. 보통, 수집한 데이터의 확률변수의 분포를 정확히 모르기 때문에 측정된 통계치의 신뢰도를 가늠할 방법이 없다. 이 때 bootstrapping을 사용한다. 측정된 n개의 데이터 중에서 중복을 허용하여 m개를 뽑고, 그들의 평균을 구하기를 여러 번 반복한다. 그럼 평균의 분포를 구할 수 있게 되고, 이로부터 95% 확률로 sample mean이 (a, b) 사이의 구간에 위치한다는 것을 보일 수 있을 것이다.
 
-### ML에서의 부트스트랩 (Bootstrap in machine learning)
+### Bootstrapping in machine learning
 
 이 “bootstrapping”은 ML에서도 사용되며, 이는 랜덤 샘플링을 통해 training data를 늘리는 방법이다.
 
