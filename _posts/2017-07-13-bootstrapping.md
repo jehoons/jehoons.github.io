@@ -32,10 +32,6 @@ Out[53]: 0.0014510638198848356
 
 “bootstrapping”은 over-fitting을 줄이는 데에도 도움이 되며, 이를 “bagging”이라고 한다. Over-fitting을 줄이기 위해서는 데이터가 많은 게 제일 좋지만 그게 마땅치 않을 때가 많다. 그렇다고 model의 complexity를 줄이는 건 그건 역으로 정확도에 악영향을 줄 수 있다. 만약 계산 시간이 크게 문제가 되지 않는 경우라면, 여러 개의 모델을 써서 model ensemble(여러 모델을 통해 결과를 뽑고, 그 값들을 평균하거나 voting하여 최종 값을 산출하는 방법)을 통해 모델의 안정성을 크게 높일 수 있다. 각각의 모델이 over-fitting 되어있더라도, 그들을 평균내면 서로서로 상쇄되어 더 general한 모델이 되기 때문이다.
 
-“bootstrapping”을 이용하면 주어진 데이터가 충분하지 않아도 model ensemble을 만들 수 있다. 똑같은 알고리즘을 통해 m 번 학습시킨다고 하자. 이 때 매번 training data를 random sampling하면, 서로 다른 m개의 모델이 만들어 진다. 각각의 모델은 학습 과정에서 사용된 데이터에 over-fitting 되어 있겠지만, m개 전체를 사용하여 결정을 내리면 over-fitting 걱정이 크게 줄어들 것이다. 이에 대한 추가적인 내용은 Wikipedia:Bootstrap_aggregating을 참조할 것.
+“bootstrapping”을 이용하면 주어진 데이터가 충분하지 않아도 model ensemble을 만들 수 있다. 똑같은 알고리즘을 통해 m번 학습시킨다고 하자. 이 때 매번 training data를 random sampling하면, 서로 다른 m개의 모델이 만들어 진다. 각각의 모델은 학습 과정에서 사용된 데이터에 over-fitting 되어 있겠지만, m개 전체를 사용하여 결정을 내리면 over-fitting 걱정이 크게 줄어들 것이다.
 
-Bootstrapping에 대해서는 다음 레퍼런스에서 휼륭히 설명하였습니다.
-
-### Reference
-
-[https://learningcarrot.wordpress.com](https://learningcarrot.wordpress.com/2015/11/12/%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-bootstrapping)
+> 이 포스트의 내용은, [여기]([https://learningcarrot.wordpress.com](https://learningcarrot.wordpress.com/2015/11/12/%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-bootstrapping)에서 작성된 내용을 일부 가져와서 편집하였다.
