@@ -11,8 +11,11 @@ published: true
 #### Data and software availability 
 
 shRNA data: [Achilles](https://portals.broadinstitute.org/achilles)
+
 Analysis results: [RNAi](https://depmap.org/rnai) 
+
 Code for DEMETER and ATLANTIS: [Github](https://github.com/cancerdatasci)
+
 Cell line molecular features: [CCLE](https://portals.broadinstitute.org/ccle)
 
 #### Synthetic Lethal과의 관계?
