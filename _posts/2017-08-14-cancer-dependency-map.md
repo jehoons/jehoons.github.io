@@ -19,9 +19,7 @@ Cell line molecular features [CCLE](https://portals.broadinstitute.org/ccle)
 
 #### Synthetic Lethal과의 관계?
 
-이 연구의 후속으로써, Cancer Dependency가 Synthetic Lethal이 어떤 관계를 가지는 지를 알아보기 위한 연구가 있다(McDonald et al., 2017). 
-
-함께 살펴보면 재미있을 것이다. 
+이 연구의 후속으로써, Cancer Dependency가 Synthetic Lethal이 어떤 관계를 가지는 지를 알아보기 위한 연구가 있다(McDonald et al., 2017). 함께 살펴보면 재미있을 것이다. 
 
 #### Reference
 
