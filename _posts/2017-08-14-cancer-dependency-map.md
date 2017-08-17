@@ -15,6 +15,8 @@ Analysis results [RNAi](https://depmap.org/rnai),
 Code for DEMETER and ATLANTIS [Github](https://github.com/cancerdatasci), 
 Cell line molecular features [CCLE](https://portals.broadinstitute.org/ccle)
 
+관련된 데이터 
+
 #### Synthetic Lethal과의 관계?
 
 이 연구의 후속으로써, Cancer Dependency가 Synthetic Lethal이 어떤 관계를 가지는 지를 알아보기 위한 연구가 있다(McDonald et al., 2017). 
