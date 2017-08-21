@@ -1,5 +1,5 @@
 ---
-title: 'Jupyter remote connection'
+title: 'About Jupyter'
 date: '2017-8-21 10:00'
 layout: post
 published: true
