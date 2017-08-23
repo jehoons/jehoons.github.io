@@ -38,14 +38,14 @@ RNAi를 이용하는 방법이외에 CRSPR-Cas9방법에 의해서도 스크리�
 
 이 연구의 후속으로써, Cancer Dependency가 Synthetic Lethal이 어떤 관계를 가지는 지를 알아보기 위한 연구가 있다(McDonald et al., 2017). 함께 살펴보면 재미있을 것이다.
 
-#### Data and software availability
+## Data and software availability
 
 shRNA data [Achilles](https://portals.broadinstitute.org/achilles),
 Analysis results [RNAi](https://depmap.org/rnai),
 Code for DEMETER and ATLANTIS [Github](https://github.com/cancerdatasci),
 Cell line molecular features [CCLE](https://portals.broadinstitute.org/ccle)
 
-#### Reference
+## Reference
 
 Tsherniak, Aviad, Francisca Vazquez, Phil G. Montgomery, Barbara A. Weir, Gregory Kryukov, Glenn S. Cowley, Stanley Gill, et al. 2017. “Defining a Cancer Dependency Map.” Cell 170 (3): 564–576.e16. doi:10.1016/j.cell.2017.06.010.
 
