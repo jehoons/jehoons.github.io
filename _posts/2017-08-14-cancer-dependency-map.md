@@ -24,7 +24,7 @@ shRNA 시퀀스들은 설계할때 seed시퀀스(여러 표적을 가질 수 있
 **DEMETER model**
 DEMETER는 off-target effect (원치않는 표적효과)를 배제하기 위한 알고리즘이다.
 
-$$H_{ij} = \sum_{k\in seed(i)}\alpha_{ik}S_{jk}+\sum_{l\in gene(i)}\beta_{il}G_{lj}+\mu_{ib_{j}}+\eps$$
+$$H_{ij} = \sum_{k\in seed(i)}\alpha_{ik}S_{jk}+\sum_{l\in gene(i)}\beta_{il}G_{lj}+\mu_{ib_{j}}+\epsilon$$
 
 여기서 $H_{ij}$는 shRNA를 암세포에 투여하였을때의 실험결과(증식 및 생존의 정도), $S_{kj}$는 씨드 효과, $G_{lj}$는 유전자에 의한 효과이다. $H_{ij}$는 $S_{kj}$와 $G_{lj}$로 이루어져 있다고 생각하는 것이다.
 
