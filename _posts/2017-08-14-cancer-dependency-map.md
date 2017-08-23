@@ -23,7 +23,6 @@ shRNA 시퀀스들은 설계할때 seed시퀀스(여러 표적을 가질 수 있
 
 **Classification of Differential Dependencies**
 
-
 **RNAi이외의 방법들**
 
 RNAi를 이용하는 방법이외에 CRSPR-Cas9방법에 의해서도 스크리닝을 할 수 있다. 비록 CRSPR-Cas9의 구별력(Specificity)이 높긴 하지만 DNA손상으로 인식되어 cellcycle 정지가 일어나는 문제가 있다.
