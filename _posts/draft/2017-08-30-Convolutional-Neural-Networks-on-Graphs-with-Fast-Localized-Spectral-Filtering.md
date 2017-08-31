@@ -13,7 +13,7 @@ published: true
 
 그래프의 노드를 분류하거나 노드의 출력치를 예측가능하다.
 
-### Terms
+## Terms
 
 **Laplacian matrix**
 
@@ -27,11 +27,7 @@ published: true
 In the mathematical field of graph theory, a bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets and such that every edge connects a vertex in to one in.
 
 
-
-
-
-
-### Reference
+## Reference
 
 Defferrard, M., Bresson, X., and Vandergheynst, P. (2016). Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering. ArXiv:1606.09375 [Cs, Stat].
 
