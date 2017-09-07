@@ -8,7 +8,6 @@ published: true
 
 (작성중)
 
-
 그래프 위의 노드를 학습 데이터로 하는 머신러닝 기법이다.
 
 그래프의 노드를 분류하거나 노드의 출력치를 예측가능하다.
@@ -21,11 +20,9 @@ published: true
 
 **Spectral graph theory**
 
+여기서 `graph invariance` 성질이 중요
 
-**Bipartite graph**
-
-In the mathematical field of graph theory, a bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets and such that every edge connects a vertex in to one in.
-
+SGT는
 
 ## Reference
 
