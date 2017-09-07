@@ -12,7 +12,7 @@ Linkage matrix?
 ```python
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
-A = np.array([[0.1,   2.5],[1.5,   .4 ],[0.3,   1  ],[1  ,   .8 ],[0.5,   0  ],[0  ,   0.5],[0.5,   0.5],[2.7,   2  ],[2.2,   3.1],[3  ,   2  ],[3.2,   1.3]])
+A = np.array([[0.1,2.5],[1.5,.4],[0.3,1],[1,.8],[0.5,0],[0,0.5],[0.5,0.5],[2.7,2],[2.2,3.1],[3,2],[3.2,1.3]])
 Z = hierarchy.linkage(A, 'single')
 ```
 
