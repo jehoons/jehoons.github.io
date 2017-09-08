@@ -5,20 +5,22 @@ layout: post
 published: true
 ---
 
-Linkage matrix?
-
-아래의 코드를 고려해 보자.
+Hierarchical clustering에서 Linkage matrix가 무엇인지 예제를 통해서 알아보자.
 
 ```python
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
+
+# 여기서 A는 데이터셋이다.
 A = np.array([[0.1,2.5],[1.5,.4],[0.3,1],[1,.8],[0.5,0],[0,0.5],[0.5,0.5],[2.7,2],[2.2,3.1],[3,2],[3.2,1.3]])
+
+# Z는
 Z = hierarchy.linkage(A, 'single')
 ```
 
-여기서 A는 데이터셋이다.
+A, Z를 보자.
 
-```
+```python
 (Pdb++) A
 array([[ 0.1,  2.5],
        [ 1.5,  0.4],
@@ -45,7 +47,7 @@ array([[  7.        ,   9.        ,   0.3       ,   2.        ],
        [ 18.        ,  19.        ,   1.92353841,  11.        ]])
 ```
 
-여기서 A는 11개의 데이터 포인트이다. Z는 연결관계를 매핑한 소위, `linkage matrix`이다. Z가 A에 대한 정보를 어떻게 인코딩하고 있는지 알아보자.
+A는 11개의 데이터 포인트를 가지고 있다. Z는 연결관계를 매핑한 소위, `linkage matrix`이다. Z가 A에 대한 정보를 어떻게 인코딩하고 있는지 알아보자.
 
 column 1. index of a class
 
@@ -55,6 +57,62 @@ column 3. distance between class
 
 column 4. sum of the numbers in a class and other class.
 
-`class`는 하나 또는 하나 이상의 member를 가질 수 있다. member라는 용어를 쓰지 않아도 된다. 여기서 데이터의 갯수가 11개 인데, 11보다 큰 index를 가지는게 혼란스럽다. (7,9) 클래스의 index는 11보다 하나 큰 index인 12가 된다. (4,6) 클래스의 index는 13이다. (5,12)는 14, (2,13)은 15, (3,14)는 16, (1,15)는 17, (10,11)은 18, (8,17)은 19이다.
+컬럼1, 컬럼2는 가장 근접한 두개의 `point` (또는 `class`)이다. `class`는 1개 이상의 `point`를 가질 수 있다. 가장 인접한 두개의 `class`들은 그것을 가지는 하나의 `class`가 된다. 예를 들면, (7,9) 클래스의 `index`는 12가 된다. 이것은 1-11까지의 `index`는 이미 11개의 `point`들에 부여하였기 때문이다. (4,6) 클래스의 index는 13이다. (5,12)는 14, (2,13)은 15, (3,14)는 16, (1,15)는 17, (10,11)은 18, (8,17)은 19이다.
 
 > 이 내용은 [여기](https://stackoverflow.com/questions/9838861/scipy-linkage-format)에서 가져온 것이다.
+
+다른 예제를 더 살펴보자.
+
+**Generating Sample Data**
+
+```python
+from matplotlib import pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage
+import numpy as np
+# generate two clusters: a with 100 points, b with 50:
+np.random.seed(4711)  # for repeatability of this tutorial
+a = np.random.multivariate_normal([10, 0], [[3, 1], [1, 4]], size=[100,])
+b = np.random.multivariate_normal([0, 20], [[3, 1], [1, 4]], size=[50,])
+X = np.concatenate((a, b),)
+print (X.shape)  # 150 samples with 2 dimensions
+plt.scatter(X[:,0], X[:,1]); plt.show()
+```
+
+**Plotting a Dendrogram**
+
+```python
+# generate the linkage matrix
+Z = linkage(X, 'ward')
+
+plt.figure(figsize=(25, 10))
+plt.title('Hierarchical Clustering Dendrogram')
+plt.xlabel('sample index')
+plt.ylabel('distance')
+dendrogram(
+    Z,
+    leaf_rotation=90.,  # rotates the x axis labels
+    leaf_font_size=8.,  # font size for the x axis labels
+)
+# plt.show()
+plt.savefig('figure-test1.png')
+```
+
+**Dendrogram Truncation**
+
+```py
+plt.figure()
+plt.title('Hierarchical Clustering Dendrogram (truncated)')
+plt.xlabel('sample index')
+plt.ylabel('distance')
+dendrogram(
+    Z,
+    truncate_mode='lastp',  # show only the last p merged clusters
+    p=6,  # show only the last p merged clusters
+    show_leaf_counts=False,  # otherwise numbers in brackets are counts
+    leaf_rotation=90.,
+    leaf_font_size=12.,
+    show_contracted=True,  # to get a distribution impression in truncated branches
+)
+# plt.show()
+plt.savefig('figure-test2.png')
+```
