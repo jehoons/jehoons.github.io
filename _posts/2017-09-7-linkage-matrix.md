@@ -61,7 +61,7 @@ column 4. sum of the numbers in a class and other class.
 
 > 이 내용은 [여기](https://stackoverflow.com/questions/9838861/scipy-linkage-format)에서 가져온 것이다.
 
-다른 예제를 더 살펴보자.
+다른 예제를 더 살펴보자. 
 
 **Generating Sample Data**
 
@@ -99,6 +99,8 @@ plt.savefig('figure-test1.png')
 
 **Dendrogram Truncation**
 
+`Dendrogram`을 절단하는 방법이다. 가능한 방법은 2가지가 있다. 클러스터의 갯수 및 클러스터 간의 거리를 이용하는 방법이 있다. 먼저 클러스터의 갯수를 이용하는 방법은 `truncate_mode`를 `lastp`로 설정한다. 다음 코드를 보자:
+
 ```py
 plt.figure()
 plt.title('Hierarchical Clustering Dendrogram (truncated)')
@@ -107,7 +109,7 @@ plt.ylabel('distance')
 dendrogram(
     Z,
     truncate_mode='lastp',  # show only the last p merged clusters
-    p=6,  # show only the last p merged clusters
+    p=3,  # show only the last p merged clusters
     show_leaf_counts=False,  # otherwise numbers in brackets are counts
     leaf_rotation=90.,
     leaf_font_size=12.,
@@ -116,3 +118,14 @@ dendrogram(
 # plt.show()
 plt.savefig('figure-test2.png')
 ```
+
+거리를 기준으로 클러스터의 갯수를 정할때에는 `dendrogram`의 y축인 `distance`값을 살펴보고, 이로부터 클러스터의 갯수를 정해서 `p`값을 정해주면 된다.
+
+**Automated Cut-Off selection**
+
+클러스터링과 관련해서 공통적인 문제는 클러스터의 갯수를 정하는 문제일 것이다. [wiki](https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set)에 관련한 내용이 작성되어 있다. 일반적으로 클러스터의 갯수가 자동으로 정해지도록 하는 것은 좋지 않다. 데이터에 대해서 잘 이해해야 하고, 클러스터의 갯수를 정할때에는 신중히 해야 한다. 
+
+`inconsistency method`를 포함하여 몇개의 방법들이 있다. 살펴보자. 
+
+> 이 내용은 [여기](https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/)에서 가져온 것이다. 
+
