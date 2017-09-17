@@ -127,5 +127,14 @@ plt.savefig('figure-test2.png')
 
 `inconsistency method`를 포함하여 몇개의 방법들이 있다. 살펴보자. 
 
+`inconsistency method`는 각 `hierarchical cluster`의 각 링크에 대한 `inconsistency coefficient`를 계산한다. 여기서 Z는 `linkage`함수에 의해서 계산된 (m-1)-by-3 행렬이다. 
+
+`inconsistency coefficient`는 클러스터를 연결하는 각 링크의 높이(클러스터간 거리)를 같은 레벨에 위치한 다른 링크들과 비교함으로써 계산된다. 이 값이 크면 클수록, 링크에 의해서 연결된 클러스터들의 유사성은 낮아진다. 
+
+Matlab에서도 `inconsistent` 함수를 지원한다. 
+https://kr.mathworks.com/help/stats/inconsistent.html
+
+
+
 > 이 내용은 [여기](https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/)에서 가져온 것이다. 
 
