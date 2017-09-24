@@ -135,6 +135,5 @@ Matlab에서도 `inconsistent` 함수를 지원한다.
 https://kr.mathworks.com/help/stats/inconsistent.html
 
 
-
 > 이 내용은 [여기](https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/)에서 가져온 것이다. 
 
