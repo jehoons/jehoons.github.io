@@ -1,5 +1,7 @@
 ---
 title: Jehoons.Github.Io
+plugins:
+  - jekyll-seo-tag
 timezone: Asia/Seoul
 future: true
 collections:
