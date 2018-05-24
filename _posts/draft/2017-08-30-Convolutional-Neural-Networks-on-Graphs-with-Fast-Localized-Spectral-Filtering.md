@@ -2,7 +2,7 @@
 title: 'Convolutional Neural Networks on Graphs'
 date: '2017-8-28 10:00'
 layout: post
-published: true
+published: false
 ---
 이 연구에서는 `Spectral Graph Theory`의 컨텍스트에서 `CNN`에 대한 형식화를 소개한다.
 
