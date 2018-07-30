@@ -26,14 +26,14 @@ chi-square value는 $\chi^2 = \frac{\sum (O - E)^2}{E}$ 으로 계산한다. 여
 | tea | 5 | 0 | 5 |
 | milk | 1 | 4 | 5 |
 | total | 6 | 4 | 10 |
-{:.table}
+{:.mbtablestyle}
 
 | Tables   |      Are      |  Cool |
 |----------|:-------------:|------:|
 | col 1 is |  left-aligned | $1600 |
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
-{:.table}
+{:.mbtablestyle}
 
 이때 맛감별사가 정말 어떤 것이 먼저 들어간 차인지를 알아낼수 있는 능력이 있다고 한다면 이를 어떻게 통계적으로 이야기 할수 있는가? 피셔는 이를 통계적으로 정확히 계산하는 방법, Fisher's exact test를 제안하였다. 이 테스트에서 사용되는 용어는 expected value, 두 변수가 독립인 경우에 대해서 기대값, enrichment = obs / expected_value, 독립인 경우의 기대값에 비해서 관측치가 얼마나 많이 나오는지를 계량한 값, p-value, 두 변수가 독립이지 않다는 가설에 대한 값, odd ratio, p / (1-p), 관련이 있을 확률에 대한 비율이다. 
 
