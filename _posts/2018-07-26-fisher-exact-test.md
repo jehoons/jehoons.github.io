@@ -19,7 +19,7 @@ chi-square value는 $\chi^2 = \frac{\sum (O - E)^2}{E}$ 으로 계산한다. 여
 
 *Fisher’s Exact Test*
 
-Fisher's exact test는 두개의 feature가 서로 연관이 있다는 것을 검정하는 중요한 방법으로 알려져 있다. 
+Fisher's exact test는 두개의 피처(feature)가 서로 연관이 있다는 것을 검정하는 중요한 방법으로 알려져 있다. 
 
 categorical analysis 에서 중요한 주제로 생각되는 기술이다. 
 
@@ -27,10 +27,11 @@ categorical analysis 에서 중요한 주제로 생각되는 기술이다.
 
 밀크티를 만들때, 차를 먼저 넣고, 우유를 나중에 넣는 경우와 우유를 먼저 넣고 차를 나중에 넣는 경우. 어떤 사람이 이 두가지 경우들을 구별할 수 있다고 할 때. 이것을 우리는 어떻게 증명할수 있는가? 
 
-, tea first, milk first, total 
-tea, 5, 0, 5
-milk, 1, 4, 5
-total, 6, 4, 10
+|   |tea first|milk first|total|
+|---|---|---|---|---|
+|tea|5|0|5|
+|milk|1|4|5|
+|total|6|4|10|
 
 이때 맛감별사가 정말 어떤 것이 먼저 들어간 차인지를 알아낼수 있는 능력이 있다고 한다면 이를 어떻게 통계적으로 이야기 할수 있는가? 
 
