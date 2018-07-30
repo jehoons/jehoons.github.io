@@ -1,5 +1,5 @@
 ---
-title: 'Fisher exact test'
+title: 'Fisher'''s exact test'
 date: '2018-7-26 10:00'
 layout: post
 published: true
